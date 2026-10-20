@@ -41,7 +41,7 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 ## Open Decisions
 
 - Employment is the current priority. Show immediate availability, transferable iqama, Jeddah location, and relocation flexibility.
-- Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work with its unavailable demo accurately labeled.
+- Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
 - Offer the main-email comprehensive CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Keep it synchronized with the canonical CV in the jobs-mail workspace.
 - Education is BCA, with MBA in progress in the final year. Professional DevOps employment is not claimed.
 
