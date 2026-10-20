@@ -259,20 +259,20 @@
 
     const actions = [
       {
+        id: 'download-cv',
+        title: 'Download CV (PDF)',
+        category: 'Action',
+        shortcut: 'D',
+        icon: 'download',
+        run: () => document.querySelector('[data-cv-download]')?.click(),
+      },
+      {
         id: 'projects',
-        title: 'Explore Featured Projects',
+        title: 'Explore Selected Work',
         category: 'Navigation',
         shortcut: 'P',
         icon: 'folder-git-2',
         run: () => scrollToId('projects'),
-      },
-      {
-        id: 'labs',
-        title: 'View Engineering Labs & Prototypes',
-        category: 'Navigation',
-        shortcut: 'L',
-        icon: 'flask-conical',
-        run: () => scrollToId('labs'),
       },
       {
         id: 'experience',
@@ -284,7 +284,7 @@
       },
       {
         id: 'skills',
-        title: 'Tech Stack & Architecture',
+        title: 'Skills and How I Work',
         category: 'Navigation',
         shortcut: 'S',
         icon: 'layers',
@@ -328,7 +328,7 @@
         category: 'External',
         shortcut: 'I',
         icon: 'linkedin',
-        run: () => window.open('https://www.linkedin.com/in/sufyan-farooq-077bbb264/', '_blank'),
+        run: () => window.open('https://www.linkedin.com/in/sufyanmfarooq/', '_blank'),
       },
     ];
 

@@ -25,3 +25,12 @@ server with the administrator SSH key; CI cannot replace its own SSH restriction
 To redeploy the current commit, use Actions → Check and deploy portfolio → Run
 workflow on `main`. To roll back site changes, revert the unwanted commit and
 push the revert to `main`.
+
+## Public CV
+
+The portfolio serves the main-email comprehensive CV from
+`assets/cv/Sufyan_Farooq_CV.pdf`. Download links in the hero, navigation,
+contact section, footer, and command palette all use this same file.
+Its source is `../jobs-mail/resume/campaign/Sufyan_Farooq_CV.pdf` in the
+local workspace. When the canonical CV changes, copy the latest PDF into
+this path before deploying. Keep the dev-email copy for email outreach.

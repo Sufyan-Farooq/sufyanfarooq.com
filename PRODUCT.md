@@ -16,7 +16,7 @@ Present Sufyan Mohammed Farooq as a builder who uses technology to solve busines
 
 ## Positioning
 
-Developer and Senior Onsite Support Engineer open to full-time opportunities. Distinguish professional support experience, software projects, paid client work, and DevOps coursework and practice. Do not add claims beyond the confirmed experience and project source.
+Application support professional with 3+ years at Digival who also builds web applications, automates workflows, and deploys personal projects. Seeking application/IT support, junior web development, cloud support, or junior DevOps opportunities. Professional support experience is the foundation; development, business websites, and cloud/DevOps projects provide additional evidence. Describe websites by what was delivered rather than emphasizing payment. Do not add claims beyond the confirmed experience and project source.
 
 ## Capabilities and Constraints
 
@@ -28,7 +28,7 @@ The existing name, logo, portrait, and supplied portfolio content are the curren
 
 ## Evidence on Hand
 
-Portfolio copy and existing project details are in `index.html`; identity assets are in `assets/`. The user added two past client websites, [Omar Global LLC](https://omergloballlc.com/) and [NAQL](https://naqlapp.com/), and identified TurnUp and Mawarith as visual references. The site contains no user-provided testimonials or case-study metrics. Preserve factual claims without amplification.
+Portfolio copy and existing project details are in `index.html`; identity assets are in `assets/`. The user added two past client websites, [Omar Global LLC](https://omergloballlc.com/) and [NAQL](https://naqlapp.com/), and identified TurnUp and Mawarith as visual references. The site contains no user-provided testimonials. The retained CV confirms university platforms serving 2,000+ users, an API dashboard that reduced daily verification from approximately two hours to under five minutes, 98% client satisfaction, and 50+ defect escalations. Preserve these supplied facts without amplification.
 
 ## Product Principles
 
@@ -41,5 +41,17 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 ## Open Decisions
 
 - Employment is the current priority. Show immediate availability, transferable iqama, Jeddah location, and relocation flexibility.
-- Feature Riyasat first and move TurnUp.io into personal projects. Omer Global LLC is the one confirmed paid client project.
+- Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work with its unavailable demo accurately labeled.
+- Offer the main-email comprehensive CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Keep it synchronized with the canonical CV in the jobs-mail workspace.
 - Education is BCA, with MBA in progress in the final year. Professional DevOps employment is not claimed.
+
+## Confirmed project corrections 20 October 2026
+
+- Remove the AI & Systems Defense Lab. The user rejected it as an inaccurate representation; do not restore it or infer security experience from it.
+- NAQL includes both its public logistics website at https://naqlapp.com/ and the Truck Dispatcher TMS at https://app.naqlapp.com/. The latter is access-controlled, not an open public demo.
+- The current Truck Dispatcher implementation handoff and code support dispatch, fleet/driver assignments, delivery evidence, and billing readiness. Do not infer live payment, Bayan, ZATCA, bank, or continuous GPS integrations.
+- Show NAQL alongside selected applications, after Riyasat. Consolidate the earlier generic TMS entry into NAQL.
+
+- Use **naqlapp** as the displayed project name, as explicitly requested by the user. It includes the landing page and Truck Dispatcher TMS.
+
+- Do not showcase the email outreach automation tool on the public portfolio or CV. It is used to contact employers, and the user explicitly asked to remove it from public-facing projects. Preserve the mailer itself.
