@@ -35,7 +35,7 @@ healthy=false
 for attempt in $(seq 1 15); do
   if curl -fsS --max-time 5 http://127.0.0.1:3001/api/stats | python3 -c \
     'import json,sys; n=json.load(sys.stdin)["totalVisits"]; assert type(n) is int and n>=int(sys.argv[1])' "$baseline" \
-    && curl -fsS --max-time 5 http://127.0.0.1:3001/ | grep -q 'id="footer-visit-count"'; then
+    && curl -fsS --max-time 5 http://127.0.0.1:3001/ | grep -q 'id="status-board"'; then
     healthy=true
     break
   fi
