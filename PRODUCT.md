@@ -45,7 +45,7 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 - Employment is the current priority. Show immediate availability, transferable iqama, Jeddah location, and relocation flexibility.
 - Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
 - Offer the CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Since 30 October 2026 it is generated from `assets/cv/cv.html` (same navy and studio-grey look as the site) by printing that page to PDF with headless Chrome; edit the HTML, then re-export. Keep it consistent with the role-specific CVs in the jobs-mail workspace.
-- Education is BCA, with MBA in progress in the final year. Professional DevOps employment is not claimed.
+- Education is BCA (Osmania University, graduated 2025), with MBA in progress in the final year. Digival start date: March 2023 (confirmed by the user 30 October 2026). Professional DevOps employment is not claimed.
 
 ## Confirmed project corrections 20 October 2026
 

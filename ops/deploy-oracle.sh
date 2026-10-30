@@ -22,11 +22,14 @@ mkdir -m 700 -p "$backup_dir"
 cp data/stats.json "$backup_dir/stats.json"
 chmod 600 "$backup_dir/stats.json"
 previous_image=$(docker inspect portfolio --format '{{.Image}}')
+# Keep a named reference: the containerd image store drops untagged images
+# once nothing uses them, which would leave rollback nothing to restore.
+docker image tag "$previous_image" portfolio-portfolio:previous
 git merge --ff-only "$revision"
 docker compose build portfolio
 rollback() {
   echo 'Deployment failed; restoring the previous container image.' >&2
-  docker image tag "$previous_image" portfolio-portfolio:latest
+  docker image tag portfolio-portfolio:previous portfolio-portfolio:latest
   docker compose up -d --no-build --force-recreate portfolio
 }
 trap 'rollback' ERR

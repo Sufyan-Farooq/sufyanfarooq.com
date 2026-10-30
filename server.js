@@ -253,8 +253,9 @@ app.get('/status.svg', (req, res) => {
 const PIPELINE_URL = 'https://api.github.com/repos/Sufyan-Farooq/sufyanfarooq.com/actions/runs?per_page=1&branch=main';
 let pipelineCache = { at: 0, data: null };
 
-app.get('/api/pipeline', async (req, res) => {
-  if (Date.now() - pipelineCache.at > 10 * 60 * 1000) {
+async function refreshPipeline() {
+  if (Date.now() - pipelineCache.at <= 10 * 60 * 1000) return;
+  {
     try {
       const r = await fetch(PIPELINE_URL, { signal: AbortSignal.timeout(8000), headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'sufyanfarooq.com' } });
       if (r.ok) {
@@ -268,8 +269,77 @@ app.get('/api/pipeline', async (req, res) => {
       console.error('[ERROR] Pipeline lookup failed:', e.message);
     }
   }
+}
+
+app.get('/api/pipeline', async (req, res) => {
+  await refreshPipeline();
   if (!pipelineCache.data) return res.status(503).json({ available: false });
   res.status(200).json(pipelineCache.data);
+});
+
+// A terminal session drawn from live data, for the top of the GitHub profile.
+// Lines appear one after another with CSS animation, which GitHub keeps when
+// it proxies SVG images.
+app.get('/terminal.svg', async (req, res) => {
+  await Promise.race([refreshPipeline(), new Promise((resolve) => setTimeout(resolve, 3000))]);
+  const escape = (v) => String(v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const pad = (v, n) => String(v).padEnd(n, ' ');
+  const checked = SERVICES.map((sv) => ({ ...sv, ...(serviceState.get(sv.id).last || {}) }));
+  const up = checked.filter((c) => c.ok).length;
+
+  const lines = [
+    { cmd: 'whoami' },
+    { out: 'Sufyan Farooq · support engineer · Jeddah, Saudi Arabia' },
+    { cmd: 'status --apps' },
+  ];
+  for (let i = 0; i < checked.length; i += 2) {
+    const cell = (c) => {
+      if (!c) return '';
+      const state = c.at == null ? 'checking' : c.ok ? `${c.code} OK  ${pad(c.ms + ' ms', 7)}` : (c.code ? `${c.code} error` : 'no answer');
+      return `${pad(c.name, 17)}${pad(state, 16)}`;
+    };
+    lines.push({ out: cell(checked[i]) + '   ' + cell(checked[i + 1]), status: true });
+  }
+  lines.push({ out: `${up} of ${checked.length} up · checked every 5 minutes by sufyanfarooq.com`, dim: true });
+  if (pipelineCache.data) {
+    lines.push({ cmd: 'git log -1 --oneline   # sufyanfarooq.com' });
+    lines.push({ out: `${pipelineCache.data.sha} ${pipelineCache.data.title}`.slice(0, 92) });
+  }
+  lines.push({ cmd: 'cat now.txt' });
+  lines.push({ out: 'Available now · open to DevOps, cloud support, automation and app support roles' });
+
+  const lineHeight = 26;
+  const top = 64;
+  const height = top + lines.length * lineHeight + 30;
+  const step = 0.45;
+  const rows = lines.map((line, i) => {
+    const y = top + i * lineHeight;
+    const delay = (i * step).toFixed(2);
+    if (line.cmd) {
+      return `<text x="32" y="${y}" class="l" style="animation-delay:${delay}s"><tspan class="p">$</tspan> <tspan class="c">${escape(line.cmd)}</tspan></text>`;
+    }
+    const cls = line.dim ? 'l d' : 'l o';
+    return `<text x="32" y="${y}" class="${cls}" xml:space="preserve" style="animation-delay:${delay}s">${escape(line.out)}</text>`;
+  }).join('');
+  const cursorY = top + lines.length * lineHeight;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${height}" viewBox="0 0 880 ${height}" role="img" aria-label="Terminal: Sufyan Farooq, support engineer in Jeddah. ${up} of ${checked.length} apps up. Available now.">`
+    + '<style>'
+    + 'text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:15px}'
+    + '.t{fill:#9aa4bf;font-size:13px}.p{fill:#6fe39a}.c{fill:#f2f2f2;font-weight:600}.o{fill:#c9cfdd}.d{fill:#9aa4bf}'
+    + '.l{opacity:0;animation:in .01s steps(1) forwards}'
+    + '.k{opacity:0;animation:in .01s steps(1) forwards,blink 1.1s steps(1) infinite}'
+    + '@keyframes in{to{opacity:1}}@keyframes blink{50%{opacity:0}}'
+    + '@media (prefers-reduced-motion:reduce){.l,.k{animation:none;opacity:1}}'
+    + '</style>'
+    + `<rect width="880" height="${height}" rx="10" fill="#0e1b3f"/>`
+    + '<rect width="880" height="38" rx="10" fill="#16234c"/><rect y="28" width="880" height="10" fill="#16234c"/>'
+    + '<text x="32" y="24" class="t">sufyan@oracle-cloud: ~</text>'
+    + '<text x="848" y="24" class="t" text-anchor="end">sufyanfarooq.com</text>'
+    + rows
+    + `<rect x="32" y="${cursorY - 15}" width="9" height="18" fill="#f2f2f2" class="k" style="animation-delay:${(lines.length * step).toFixed(2)}s,${(lines.length * step).toFixed(2)}s"/>`
+    + '</svg>';
+  res.set({ 'Content-Type': 'image/svg+xml; charset=utf-8', 'Cache-Control': 'no-cache, max-age=0' });
+  res.send(svg);
 });
 
 app.listen(PORT, () => {
