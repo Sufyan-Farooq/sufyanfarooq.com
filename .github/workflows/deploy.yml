@@ -52,7 +52,7 @@ jobs:
       - name: Verify public site and stats
         run: |
           curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 15 \
-            https://sufyanfarooq.com/ | grep -q 'id="footer-visit-count"'
+            https://sufyanfarooq.com/ | grep -q 'id="status-board"'
           curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 15 \
             https://sufyanfarooq.com/api/stats | python3 -c \
             'import json,sys; n=json.load(sys.stdin)["totalVisits"]; assert type(n) is int and n >= 0; print("Live visits:",n)'

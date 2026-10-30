@@ -16,11 +16,13 @@ Present Sufyan Mohammed Farooq as a builder who uses technology to solve busines
 
 ## Positioning
 
-Application support professional with 3+ years at Digival who also builds web applications, automates workflows, and deploys personal projects. Seeking application/IT support, junior web development, cloud support, or junior DevOps opportunities. Professional support experience is the foundation; development, business websites, and cloud/DevOps projects provide additional evidence. Describe websites by what was delivered rather than emphasizing payment. Do not add claims beyond the confirmed experience and project source.
+Updated 30 October 2026 at the user's request: an ops and automation builder. Headline: "I keep systems running and automate the rest." The foundation is 3+ years of production support at Digival. The proof is self-hosted apps, CI/CD, AI agent automation and scripting. Target roles: DevOps and cloud support, automation and AI agents, application support. Do not claim a DevOps job title or DevOps employment. Label Kubernetes, Helm, Argo CD, Prometheus and Grafana as training. Describe websites by what was delivered rather than emphasizing payment. Do not add claims beyond the confirmed experience, the user's CVs (DevOps, Agent Engineer, latest; October 2026) and project sources.
+
+Confirmed from the user's CVs: ~300 exam sessions a year behind the dashboard; AWS email delivery queuing diagnosis; 30% reduction in ticket response times from bilingual documentation; bilingual voice booking agent (Vapi/Retell, OpenAI, n8n); Meta click-to-WhatsApp AI sales agent (n8n, OpenAI, WhatsApp Business API); Python health monitoring daemon; AI coding agents in daily work. Not used publicly: the "99%+ SLA" and "Reliability Coordinator" title variants from older CVs, and private client repos (customs clearance, Bulker, others). The user said private work cannot be disclosed yet.
 
 ## Capabilities and Constraints
 
-The current site is a static single-page portfolio. It includes project links, a skills overview, work experience, contact links and a contact form, a command palette, responsive navigation, and a visitor telemetry display. Preserve existing content and working features during the visual overhaul unless the user asks to change them.
+The site is a single-page portfolio served by the Express server. It includes a live service board (`/api/status`, probing the deployed apps every 5 minutes; `/status.svg` for the GitHub README), the latest run of its own deploy pipeline (`/api/pipeline`), project links, work experience, a stack overview, contact links (email, WhatsApp, phone, LinkedIn, GitHub, CV) and a contact form, and responsive navigation. Check history and outage incidents persist in stats.json under `monitor`; the board shows uptime only after an hour of data and states the last recorded outage. Visits are still recorded (`/api/stats`) but no longer shown on the page. Preserve existing content and working features during the visual overhaul unless the user asks to change them.
 
 ## Brand Commitments
 
@@ -42,7 +44,7 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 
 - Employment is the current priority. Show immediate availability, transferable iqama, Jeddah location, and relocation flexibility.
 - Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
-- Offer the main-email comprehensive CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Keep it synchronized with the canonical CV in the jobs-mail workspace.
+- Offer the CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Since 30 October 2026 it is generated from `assets/cv/cv.html` (same navy and studio-grey look as the site) by printing that page to PDF with headless Chrome; edit the HTML, then re-export. Keep it consistent with the role-specific CVs in the jobs-mail workspace.
 - Education is BCA, with MBA in progress in the final year. Professional DevOps employment is not claimed.
 
 ## Confirmed project corrections 20 October 2026

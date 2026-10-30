@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sufyan Mohammed Farooq | CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet" />
+<style>
+  /* Same palette as sufyanfarooq.com: shirt navy and studio grey from the portrait */
+  :root {
+    --navy: #0e1b3f;
+    --navy-ink-2: #c9cfdd;
+    --studio: #efefef;
+    --ink: #0e1b3f;
+    --ink-2: #2b3a63;
+    --muted: #535e7a;
+    --line: #cfd1d8;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 210mm;
+    height: 297mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Archivo', Arial, sans-serif;
+    font-size: 8.9pt;
+    line-height: 1.38;
+    color: var(--ink-2);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  p, h1, h2, h3, ul { margin: 0; }
+  ul { padding: 0; list-style: none; }
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    background: var(--navy);
+    color: #f2f2f2;
+    padding: 9mm 13mm 7mm;
+  }
+  h1 { font-size: 23pt; line-height: 1; font-weight: 780; font-variation-settings: 'wdth' 112; letter-spacing: -0.015em; }
+  .role { margin-top: 2.2mm; font-size: 11.5pt; font-weight: 620; font-variation-settings: 'wdth' 110; color: #f2f2f2; }
+  .contact { margin-top: 3.2mm; color: var(--navy-ink-2); font-size: 8.8pt; }
+  .contact .sep { color: #6f7ca3; margin: 0 1.6mm; }
+  .status { margin-top: 2mm; color: #f2f2f2; font-weight: 600; font-size: 8.8pt; }
+
+  .page { display: grid; grid-template-columns: 1fr 58mm; flex: 1; }
+  main { padding: 6mm 8mm 6mm 13mm; }
+  aside { background: var(--studio); padding: 6mm 9mm 6mm 7mm; }
+
+  h2 {
+    font-size: 10.5pt; font-weight: 740; font-variation-settings: 'wdth' 112;
+    color: var(--ink); padding-bottom: 1.4mm; border-bottom: 1px solid var(--line); margin-bottom: 2.4mm;
+  }
+  section + section { margin-top: 4mm; }
+  .summary { color: var(--ink-2); }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  h3 { font-size: 9.8pt; font-weight: 700; color: var(--ink); }
+  .when { font-size: 8.6pt; color: var(--muted); white-space: nowrap; }
+  .org { color: var(--muted); font-size: 8.8pt; margin-bottom: 1.6mm; }
+  .bullets { list-style: square; padding-left: 3.6mm; }
+  .bullets li { margin-top: 0.7mm; padding-left: 0.4mm; }
+  .bullets li::marker { color: var(--navy); font-size: 0.9em; }
+  strong { color: var(--ink); font-weight: 650; }
+
+  .item + .item { margin-top: 1.6mm; }
+  .item p:first-child { color: var(--ink); }
+  .item p { display: inline; }
+  .item .stack { color: var(--ink-2); font-size: 8.3pt; }
+  .item .stack::before { content: " — "; }
+
+  aside h2 { border-bottom-color: #c9cbd3; }
+  aside .group + .group { margin-top: 2.4mm; }
+  aside .label { font-weight: 650; color: var(--ink); }
+  aside p { font-size: 8.7pt; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Sufyan Mohammed Farooq</h1>
+    <p class="role">Support Engineer | DevOps &amp; Automation</p>
+    <p class="contact">
+      <span>Jeddah, Saudi Arabia (open to relocation)</span><span class="sep">|</span><a href="tel:+966544882306">+966 54 488 2306</a><span class="sep">|</span><a href="mailto:sufyanfarooqsmf@gmail.com">sufyanfarooqsmf@gmail.com</a><span class="sep">|</span><a href="https://sufyanfarooq.com/">sufyanfarooq.com</a><br />
+      <a href="https://github.com/Sufyan-Farooq">github.com/Sufyan-Farooq</a><span class="sep">|</span><a href="https://www.linkedin.com/in/sufyanmfarooq/">linkedin.com/in/sufyanmfarooq</a>
+    </p>
+    <p class="status">Available immediately | Transferable iqama | Arabic and English</p>
+  </header>
+
+  <div class="page">
+    <main>
+      <section>
+        <h2>Summary</h2>
+        <p class="summary">Support engineer with 3+ years keeping university learning platforms running for 2,000+ users in Saudi Arabia: incident triage, API and log investigation, release testing and escalation to developers. Builds and self-hosts web apps on Oracle Cloud with Docker and GitHub Actions, and automates repetitive work with Python, n8n and AI agents. Seeking DevOps, cloud support, automation or application support roles.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="job-head"><h3>Senior Onsite Support Engineer</h3><span class="when">2023 – Present</span></div>
+        <p class="org">Digival IT Solutions · Jeddah, Saudi Arabia · University LMS platforms</p>
+        <ul class="bullets">
+          <li>Supported <strong>2,000+</strong> students, faculty and staff at Tier 1 and Tier 2, keeping a <strong>98%</strong> satisfaction rating.</li>
+          <li>Built an API-driven exam-readiness dashboard (JavaScript, Axios) for ~300 exam sessions a year that cut daily verification from <strong>about 2 hours to under 5 minutes</strong>.</li>
+          <li>Ran UAT and regression testing before releases; reproduced auth and data-sync faults with logs, Postman and cURL and escalated <strong>50+ defects</strong> with the exact failing requests.</li>
+          <li>Traced platform email delivery failures to queuing in the AWS email infrastructure and gave engineering the evidence to fix it.</li>
+          <li>Wrote Arabic and English SOPs, runbooks and onboarding guides, cutting ticket response times by <strong>30%</strong>.</li>
+          <li>Promoted from Onsite Support Engineer; supervised one support colleague and led user onboarding sessions.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="item"><p><strong>TurnUp</strong>: realtime multiplayer games I run on Oracle Cloud with Docker Compose; GitHub Actions deploys, health checks, database backups and rollback.</p><p class="stack">React · Socket.io · PostgreSQL · Docker · GitHub Actions</p></div>
+        <div class="item"><p><strong>sufyanfarooq.com</strong>: self-hosted portfolio. GitHub Actions runs tests and a Docker build, deploys over SSH to an Oracle Cloud VM running Docker Compose, then health-checks the live site. It also checks these apps every 5 minutes.</p><p class="stack">Node.js · Express · Docker Compose · GitHub Actions · Oracle Cloud · Linux</p></div>
+        <div class="item"><p><strong>naqlapp</strong> (naqlapp.com): logistics website and Truck Dispatcher TMS: dispatch, fleet and driver assignment, delivery evidence, billing readiness.</p><p class="stack">React · TypeScript · Node.js · PostgreSQL</p></div>
+        <div class="item"><p><strong>Riyasat</strong>: property management: agreements, payments, maintenance, reports, role-based access.</p><p class="stack">Next.js · TypeScript · Supabase</p></div>
+        <div class="item"><p><strong>Mawarith</strong>: Islamic inheritance calculator with a typed engine and Arabic UI.</p><p class="stack">React · TypeScript</p></div>
+      </section>
+
+      <section>
+        <h2>AI and Automation Projects</h2>
+        <div class="item"><p><strong>Bilingual voice booking agent</strong>: Arabic/English agent that answers enquiries, checks availability, books and reschedules via webhooks, and escalates to a human.</p><p class="stack">Vapi/Retell · OpenAI · n8n · REST APIs · Google Calendar</p></div>
+        <div class="item"><p><strong>WhatsApp AI sales agent</strong>: qualifies travel leads from Meta ads, extracts requirements, looks up pricing and routes qualified leads to consultants.</p><p class="stack">n8n · OpenAI tool calling · WhatsApp Business API · Google Sheets</p></div>
+        <div class="item"><p><strong>Health monitoring daemon</strong>: multi-threaded Python service that polls endpoints, records latency and status codes, and alerts with exponential backoff.</p><p class="stack">Python · SQLite · REST</p></div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Skills</h2>
+        <div class="group"><p class="label">DevOps and cloud</p><p>Linux (Ubuntu, systemd, cron, SSH), Bash, Docker, Docker Compose, Nginx with TLS, GitHub Actions, Oracle Cloud, AWS EC2</p></div>
+        <div class="group"><p class="label">AI and automation</p><p>n8n, OpenAI API, tool calling, voice and WhatsApp agents, prompt design, Python, PowerShell, AI coding agents</p></div>
+        <div class="group"><p class="label">Development</p><p>JavaScript, TypeScript, React, Next.js, Node.js, Express, PostgreSQL, MongoDB, SQLite, Git</p></div>
+        <div class="group"><p class="label">Support and testing</p><p>REST APIs, Postman, cURL, log investigation, root-cause analysis, UAT, regression testing, runbooks</p></div>
+        <div class="group"><p class="label">In training</p><p>Kubernetes, Helm, Argo CD, Prometheus, Grafana, AWS ECS/EKS; learning Terraform</p></div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="group"><p class="label">MBA</p><p>In progress, final year · expected 2027</p></div>
+        <div class="group"><p class="label">Bachelor of Computer Applications</p><p>Osmania University, Hyderabad</p></div>
+        <div class="group"><p class="label">100xDevs</p><p>Web development and DevOps course: Linux, Docker, Kubernetes, CI/CD, monitoring</p></div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <p>Arabic · English · Hindi · Urdu</p>
+      </section>
+    </aside>
+  </div>
+</body>
+</html>

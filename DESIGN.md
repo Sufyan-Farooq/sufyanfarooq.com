@@ -1,191 +1,155 @@
 ---
 name: Sufyan Farooq Portfolio
-description: An editorial portfolio for practical technology and human outcomes.
+description: A working ops console that proves operations skill by checking its own services live.
 colors:
-  paper: "#eef4fa"
-  paper-light: "#f8faff"
-  paper-dark: "#e2eaf5"
-  ink: "#101f33"
-  ink-soft: "#334761"
-  muted: "#53647b"
-  line: "#bdc9da"
-  accent: "#1567d8"
-  accent-dark: "#0c4f9f"
-  slate-blue: "#526f8b"
-  night: "#101d2a"
-  status-blue: "#4b7fb0"
-  status-green: "#658350"
-  button-text: "#fffaf1"
+  navy: "#0e1b3f"
+  navy-2: "#16234c"
+  navy-3: "#1c2a55"
+  studio: "#efefef"
+  studio-2: "#e3e2e3"
+  studio-3: "#d6d6da"
+  line-navy: "#26345f"
+  line-studio: "#cfd1d8"
+  line-strong-navy: "#3b4a79"
+  line-strong-studio: "#9ea6ba"
+  ink-on-navy: "#f2f2f2"
+  ink-2-on-navy: "#c9cfdd"
+  muted-on-navy: "#9aa4bf"
+  ink-on-studio: "#0e1b3f"
+  ink-2-on-studio: "#2b3a63"
+  muted-on-studio: "#535e7a"
+  ok: "#6fe39a"
+  ok-on-studio: "#1d8a4a"
+  bad: "#ff8a8a"
+  bad-on-studio: "#c2333f"
 typography:
   display:
-    fontFamily: "Pliant, Bricolage Grotesque, Manrope, sans-serif"
-    fontSize: "clamp(3.3rem, 6.3vw, 6.125rem)"
-    fontWeight: 700
-    lineHeight: 0.91
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(2.5rem, 4.7vw, 4.6rem)"
+    fontWeight: 760
+    fontStretch: "wdth 110"
+    lineHeight: 0.98
     letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 3.8vw, 3.4rem)"
+    fontWeight: 740
+    fontStretch: "wdth 112"
+    lineHeight: 1
+    letterSpacing: "-0.02em"
+  title:
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "1.15rem–1.55rem"
+    fontWeight: 700
+    fontStretch: "wdth 112"
   body:
-    fontFamily: "Manrope, sans-serif"
-    fontSize: "16px"
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "normal"
-  label:
-    fontFamily: "DM Mono, monospace"
-    fontSize: "0.72rem"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.065em"
+    lineHeight: 1.6
+  data:
+    fontFamily: "Martian Mono, ui-monospace, monospace"
+    fontSize: "0.75rem–0.78rem"
+    fontWeight: 400
+    fontVariantNumeric: "tabular-nums"
 rounded:
-  xs: "2px"
-  sm: "3px"
-  md: "4px"
-  button: "5px"
-  hero-button: "10px"
-  logo: "10px"
+  control: "2px"
+  lamp: "50%"
 spacing:
-  nav-gutter: "28px"
-  mobile-gutter: "22px"
-  section-mobile: "76px"
+  gutter: "clamp(16px, 4vw, 40px)"
+  wrap: "1240px"
+  section-y: "clamp(72px, 10vw, 136px)"
 components:
-  button-primary:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.button-text}"
-    typography: "700 0.72rem Manrope, sans-serif"
-    rounded: "{rounded.button}"
-    padding: "0 19px"
-    height: "48px"
-  button-secondary:
+  button-signal:
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.signal-ink}"
+    rounded: "{rounded.control}"
+    height: "50px"
+    padding: "0 22px"
+  button-line:
     backgroundColor: "transparent"
+    borderColor: "{colors.line-strong}"
     textColor: "{colors.ink}"
-    typography: "700 0.72rem Manrope, sans-serif"
-    rounded: "{rounded.button}"
-    padding: "0 19px"
-    height: "48px"
+    rounded: "{rounded.control}"
+    height: "50px"
+  status-board:
+    backgroundColor: "{colors.panel}"
+    borderColor: "{colors.line}"
+    shadow: "0 24px 60px -30px rgba(0,0,0,0.7)"
+  status-chip:
+    borderColor: "{colors.line}"
+    textColor: "{colors.muted}"
+    typography: "{typography.data}"
   input:
-    backgroundColor: "{colors.paper-light}"
-    textColor: "{colors.ink}"
-    typography: "400 0.72rem Manrope, sans-serif"
-    rounded: "{rounded.sm}"
-    padding: "10px 12px"
-    height: "46px"
-  project-media:
-    backgroundColor: "{colors.paper-dark}"
-    textColor: "{colors.ink}"
-    rounded: "0px"
-    size: "aspect-ratio 1.65"
+    backgroundColor: "{colors.ground}"
+    borderColor: "{colors.line-strong}"
+    focusBorderColor: "{colors.signal}"
+    rounded: "{rounded.control}"
 ---
 
 # Design System: Sufyan Farooq Portfolio
 
 ## Overview
 
-**Creative North Star: "Editorial Field Notes"**
+**Creative North Star: "The ops console that checks itself"**
 
-The portfolio reads like a considered field journal about useful technology: clear section numbering, monospaced annotations, fine rules, and confident typography organize the story. Cool paper surfaces and deep navy ink keep the page calm and legible, while blue marks the key actions, links, and ideas that deserve emphasis. The portrait and project interfaces remain the authentic evidence at the center of the experience.
+The page is a working status board rather than a brochure. Its first viewport pairs a plain claim, "I keep systems running and automate the rest.", with a panel that measures the apps Sufyan built: real HTTP codes, latency and 24-hour uptime, fetched from the site's own server. The rest of the page reads like an operator's notes: a problem → action → result log from Digival, shipped apps with live status chips, a ledger of AI agents and infrastructure work, the site's own deploy pipeline with its latest real GitHub Actions run, and a stack split honestly into work, projects and training.
 
-The visual system pairs editorial structure with practical clarity. Its spacing gives each project and career detail room to be read, while repeated labels and hairlines make a long single-page portfolio easy to scan. Blue and navy carry the chosen identity; the slate-blue secondary tone softens supporting details.
+It refuses two defaults: the dev-portfolio hero (portrait, gradient, skill-icon grid) and the neon-on-black hacker costume.
 
-**Key Characteristics:**
-- Cool blue paper, deep navy ink, and a decisive blue accent.
-- Numbered field-note labels set in DM Mono.
-- Large, compact display headlines paired with readable Manrope body copy.
-- Fine rules and restrained corner rounding keep the work in focus.
+**Key characteristics:**
+- The palette is sampled from Sufyan's portrait: the navy of his shirt and the light grey of the studio backdrop. The page should feel like the photo.
+- Two fields alternate: navy (hero, work, stack, footer) and studio grey (experience, pipeline, contact). Fields meet edge to edge.
+- There is no separate accent hue. The action colour is the opposite field's colour: a studio-grey button on navy, a navy button on grey.
+- Green and red appear only for measured state (and for the availability lamp).
+- Hairline rules and 2px corners. Panels carry depth; sections are separated by rules or a field change.
+
+The user chose this in October 2026. Their goal was a blue that matches their photo; earlier graphite/amber and indigo/aqua versions were dropped (the latter for looking AI-generated).
 
 ## Colors
 
-The palette moves from icy blue paper through layered blue-gray neutrals to a confident cobalt accent and midnight navy.
+Tokens are semantic (`--ground`, `--panel`, `--ink`, `--ink-2`, `--muted`, `--signal`, `--signal-ink`, `--ok`, `--bad`). The navy field is the default; the `.theme-studio` class remaps every token for the grey field, so components never hard-code a field.
 
-### Primary
-- **Clear Portfolio Blue** (`{colors.accent}`): Primary actions, emphasized words, section markers, links, and focus indicators.
-- **Deep Action Blue** (`{colors.accent-dark}`): Hover states and high-contrast text links.
+- **Navy field:** ground `{colors.navy}`, panels `{colors.navy-2}` / `{colors.navy-3}`, rules `{colors.line-navy}`, ink `{colors.ink-on-navy}`, reading copy `{colors.ink-2-on-navy}`, metadata `{colors.muted-on-navy}` (6.8:1). Buttons are studio grey with navy text.
+- **Studio field:** ground `{colors.studio}`, panels `{colors.studio-2}` / `{colors.studio-3}`, rules `{colors.line-studio}`, ink `{colors.ink-on-studio}`, reading copy `{colors.ink-2-on-studio}`, metadata `{colors.muted-on-studio}` (5.6:1). Buttons are navy with grey text; form fields are studio grey.
+- **Measured state:** `{colors.ok}` / `{colors.bad}` on navy, `{colors.ok-on-studio}` / `{colors.bad-on-studio}` on grey.
 
-### Secondary
-- **Slate Field Blue** (`{colors.slate-blue}`): Supporting location and status details.
-- **Status Blue** (`{colors.status-blue}`): Small availability and location markers.
-- **Status Green** (`{colors.status-green}`): Live project status only.
-
-### Neutral
-- **Icy Paper** (`{colors.paper}`): Main page canvas.
-- **Pale Paper** (`{colors.paper-light}`): Alternate section and form surface.
-- **Blue Gray Paper** (`{colors.paper-dark}`): Recessed sections and selected command-palette rows.
-- **Midnight Navy** (`{colors.night}`): Dark feature section, portrait caption, and footer.
-- **Deep Ink** (`{colors.ink}`): Primary text and structural rules.
-- **Soft Ink** (`{colors.ink-soft}`): Supporting paragraphs and secondary navigation.
-- **Muted Blue Gray** (`{colors.muted}`): Metadata, labels, and tertiary copy.
-- **Cool Divider** (`{colors.line}`): Hairlines, field borders, and outlined controls.
-- **Warm White** (`{colors.button-text}`): Text on the blue primary action.
-
-**The Blue Signal Rule.** Reserve the strongest blue for actions, focus, active emphasis, and small editorial signals; let the pale paper and navy ink do most of the work.
+**The Photo Rule.** Every colour on the page is either in the portrait or reports a measurement. No added accent hue, no gradients, no glow.
 
 ## Typography
 
-**Display Font:** Pliant (with Bricolage Grotesque, Manrope, and sans-serif fallbacks)
-**Body Font:** Manrope (with sans-serif fallback)
-**Label/Mono Font:** DM Mono (with monospace fallback)
+The hero states one identity ("Support engineer who builds, ships and runs real apps.") and names target roles once, in the availability sentence. Do not add keyword rows or middot metadata strips; write sentences.
 
-**Character:** Pliant supplies the dense, confident headline voice. Manrope keeps paragraphs, navigation, and controls direct and approachable; DM Mono gives dates, indices, and small metadata a field-note quality.
+**Archivo** carries every voice through its width axis: expanded (wdth 110–118) for display, headings and the wordmark; normal width for reading. **Martian Mono** is used strictly for measured or machine data: HTTP codes, latency, uptime, timestamps, commit hashes, stack lines and key numbers. It is never used for paragraphs or as a "technical" costume.
 
-### Hierarchy
-- **Display** (700, `clamp(3.3rem, 6.3vw, 6.125rem)`, line-height 0.91, letter-spacing -0.025em): The opening statement; it scales down separately on narrow screens.
-- **Headline** (700, fluid section scale, line-height 1.01–1.05): Section titles and project names.
-- **Title** (600–700, approximately 1.08–1.55rem): Cards, timeline roles, and supporting section headings.
-- **Body** (400, 16px, line-height 1.65 at the root): Descriptions and narrative; secondary copy commonly uses 0.72rem with a generous 1.7–1.8 line height.
-- **Label** (500, 0.72rem, line-height 1.4, letter-spacing 0.065em, uppercase where used): Indices, dates, categories, and technical metadata.
-
-**The Three Voices Rule.** Use the display face for hierarchy, Manrope for reading and interaction, and DM Mono for annotation; do not use the mono face for paragraph copy.
+- **Display:** 760, `clamp(2.5rem, 4.7vw, 4.6rem)`, line-height 0.98, tracking -0.025em, balanced.
+- **Headline:** 740, `clamp(2rem, 3.8vw, 3.4rem)`, line-height 1.
+- **Title:** 650–720, 1.15–1.55rem, expanded.
+- **Body:** 400, 17px, line-height 1.6; lead copy 1.12rem.
+- **Data:** Martian Mono 0.75–0.78rem, tabular numerals. Nothing functional goes below 12px.
 
 ## Layout
 
-The desktop canvas is capped at 1424px with generous side gutters. The opening combines a broad text column, a portrait column, and a narrow annotation rail; projects use a two-column grid, while later sections shift between split editorial grids and full-width ruled lists. At 980px the hero and several content grids simplify; at 720px the navigation becomes a drawer, the hero and project grid stack, and split content becomes one column. The page uses fine horizontal rules and section padding rather than boxed panels to establish rhythm. On mobile, the main gutter is 22px and section padding is 76px.
+Content wraps at 1240px with a `clamp(16px, 4vw, 40px)` gutter. The hero and section heads use a 7:5 split; the Digival log is a three-column problem / action / result table that collapses to stacked rows with the result first under 820px. Projects are a two-column grid; the pipeline is a five-step horizontal flow that turns vertical under 1080px. The top bar is sticky; under 1080px its links move into a full-screen drawer. Under 560px the board hides its 24h column and buttons go full width.
 
-## Elevation & Depth
+## Motion
 
-Depth comes mainly from tonal surface changes, authentic project screenshots, and image cropping. Most content remains flat and is separated with hairlines. The command palette is the exception: it uses a clear shadow to float above the page. Interactive cards may use motion, but shadows are not a general-purpose surface treatment.
-
-### Shadow Vocabulary
-- **Command palette** (`0 16px 32px -14px rgba(0,0,0,.45)`): Separates the modal search surface from the dimmed page.
-
-## Shapes
-
-The shape language is mostly square and precise: most tags and fields use 2–4px corners, standard buttons use 5px, and the larger hero actions and supplied logo use 10px. Project media uses rectangular frames with clipped imagery. Thin borders and straight rules provide structure more often than rounded containers.
+One authored moment: status rows resolve one after another (140ms apart) as live results arrive. Everything else is short hover and focus transitions on the `cubic-bezier(0.16, 1, 0.3, 1)` ease-out. Reduced motion applies results instantly and turns off smooth scrolling.
 
 ## Components
 
-### Buttons
-- **Shape:** Compact, lightly rounded controls (5px); hero actions use 10px corners.
-- **Primary:** Cobalt fill, warm-white text, 48px minimum height, and 19px horizontal padding. Hero actions expand to 52px height and 28px horizontal padding.
-- **Hover / Focus:** The primary darkens and lifts by 2px. The secondary fills with ink on hover. Keyboard focus uses a 3px accent outline with a 4px offset.
-- **Secondary:** Transparent surface with an ink border and ink text.
+- **Status board:** panel with a header (title and live summary lamp), a table of services (name with status dot, HTTP, latency, 24h), and a footer that states when and how often the checks run.
+- **Status chip:** small mono chip on each project card, coloured from the same checks.
+- **Log row:** problem (ink-2), action (ink), result (mono number in signal).
+- **Flow step:** square marker in the signal colour on the rule, mono step number, expanded name, one-line description; sits on the studio-grey field.
+- **Buttons:** signal (filled with the opposite field colour) for the main action, line (outlined) for secondary.
+- **Top bar:** small round portrait beside the name, five links in page order, one CV button. No clock, no shortcuts.
+- **Footer:** the full name as a close; no counters.
+- **Removed after the October 2026 critique:** Ctrl/⌘K palette, Jeddah clock, visitor counter, discipline keyword row, card shadows on the board.
 
-### Chips
-- **Style:** Language tags and project labels use transparent or paper surfaces, thin cool dividers, muted ink, and small 2–3px corners. Technical metadata uses DM Mono.
+## Do / Don't
 
-### Cards / Containers
-- **Corner Style:** Project media is square-cornered and clipped; content below stays open rather than in a raised card.
-- **Background:** Screens retain their authentic interface colors; empty media falls back to blue-gray paper.
-- **Shadow Strategy:** Flat by default; see Elevation & Depth for the command palette exception.
-- **Border:** Hairlines separate metadata and supporting content.
-- **Internal Padding:** Project copy sits outside the media frame with a top divider above its final metadata row.
-
-### Inputs / Fields
-- **Style:** Pale paper fill, 1px border, 3px radius, and 46px minimum height.
-- **Focus:** Accent border and a subtle two-pixel blue focus halo.
-
-### Navigation
-- **Style:** Sticky pale-paper bar with a bottom hairline, display-face name, mono role label, and compact Manrope links. The mobile layout replaces desktop links with a full-height paper drawer below the header.
-
-### Project Media
-Authentic project screenshots are the lead portfolio artifacts. Keep their interface content intact, crop only within the media frame, and retain clear titles, short descriptions, and small index metadata nearby.
-
-## Do's and Don'ts
-
-### Do:
-- **Do** use the paper, ink, and accent tokens for page surfaces, text, and actions.
-- **Do** use fine rules and mono annotations to support scanning across the long portfolio.
-- **Do** keep the supplied portrait and project interfaces photographic and recognizable.
-- **Do** preserve visible keyboard focus and the reduced-motion accommodation.
-
-### Don't:
-- **Don't** introduce unrelated accent colors into the portfolio chrome.
-- **Don't** place project screenshots inside generic elevated cards; let the artifact lead.
-- **Don't** use rounded pill shapes as the default form for controls or metadata.
+- Do show measured data where a claim could go.
+- Do label training work as training.
+- Don't add gradients, glass, glowing neon edges or icon-card grids.
+- Don't use mono for prose, or add any hue that isn't in the portrait or a measured state.

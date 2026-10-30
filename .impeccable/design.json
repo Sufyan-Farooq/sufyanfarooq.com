@@ -1,112 +1,122 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-27T10:30:00+03:00",
+  "generatedAt": "2026-10-30T06:28:02.853Z",
   "title": "Design System: Sufyan Farooq Portfolio",
   "extensions": {
     "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Icy Paper", "canonical": "#eef4fa", "tonalRamp": ["oklch(15% 0.015 250)", "oklch(25% 0.015 250)", "oklch(35% 0.015 250)", "oklch(45% 0.015 250)", "oklch(55% 0.015 250)", "oklch(70% 0.015 250)", "oklch(85% 0.015 250)", "oklch(96% 0.015 250)"] },
-      "paper-light": { "role": "neutral", "displayName": "Pale Paper", "canonical": "#f8faff", "tonalRamp": ["oklch(15% 0.012 250)", "oklch(25% 0.012 250)", "oklch(35% 0.012 250)", "oklch(45% 0.012 250)", "oklch(55% 0.012 250)", "oklch(70% 0.012 250)", "oklch(85% 0.012 250)", "oklch(98% 0.012 250)"] },
-      "paper-dark": { "role": "neutral", "displayName": "Blue Gray Paper", "canonical": "#e2eaf5", "tonalRamp": ["oklch(15% 0.02 250)", "oklch(25% 0.02 250)", "oklch(35% 0.02 250)", "oklch(45% 0.02 250)", "oklch(55% 0.02 250)", "oklch(70% 0.02 250)", "oklch(85% 0.02 250)", "oklch(93% 0.02 250)"] },
-      "ink": { "role": "neutral", "displayName": "Deep Ink", "canonical": "#101f33", "tonalRamp": ["oklch(15% 0.025 250)", "oklch(25% 0.025 250)", "oklch(35% 0.025 250)", "oklch(45% 0.025 250)", "oklch(55% 0.025 250)", "oklch(70% 0.025 250)", "oklch(85% 0.025 250)", "oklch(96% 0.025 250)"] },
-      "ink-soft": { "role": "neutral", "displayName": "Soft Ink", "canonical": "#334761", "tonalRamp": ["oklch(15% 0.03 250)", "oklch(25% 0.03 250)", "oklch(35% 0.03 250)", "oklch(45% 0.03 250)", "oklch(55% 0.03 250)", "oklch(70% 0.03 250)", "oklch(85% 0.03 250)", "oklch(96% 0.03 250)"] },
-      "muted": { "role": "neutral", "displayName": "Muted Blue Gray", "canonical": "#53647b", "tonalRamp": ["oklch(15% 0.03 250)", "oklch(25% 0.03 250)", "oklch(35% 0.03 250)", "oklch(45% 0.03 250)", "oklch(55% 0.03 250)", "oklch(70% 0.03 250)", "oklch(85% 0.03 250)", "oklch(96% 0.03 250)"] },
-      "line": { "role": "neutral", "displayName": "Cool Divider", "canonical": "#bdc9da", "tonalRamp": ["oklch(15% 0.025 250)", "oklch(25% 0.025 250)", "oklch(35% 0.025 250)", "oklch(45% 0.025 250)", "oklch(55% 0.025 250)", "oklch(70% 0.025 250)", "oklch(85% 0.025 250)", "oklch(96% 0.025 250)"] },
-      "accent": { "role": "primary", "displayName": "Clear Portfolio Blue", "canonical": "#1567d8", "tonalRamp": ["oklch(15% 0.19 258)", "oklch(25% 0.19 258)", "oklch(35% 0.19 258)", "oklch(45% 0.19 258)", "oklch(55% 0.19 258)", "oklch(65% 0.19 258)", "oklch(78% 0.19 258)", "oklch(92% 0.19 258)"] },
-      "accent-dark": { "role": "primary", "displayName": "Deep Action Blue", "canonical": "#0c4f9f", "tonalRamp": ["oklch(15% 0.15 258)", "oklch(25% 0.15 258)", "oklch(35% 0.15 258)", "oklch(45% 0.15 258)", "oklch(55% 0.15 258)", "oklch(65% 0.15 258)", "oklch(78% 0.15 258)", "oklch(92% 0.15 258)"] },
-      "slate-blue": { "role": "secondary", "displayName": "Slate Field Blue", "canonical": "#526f8b", "tonalRamp": ["oklch(15% 0.045 245)", "oklch(25% 0.045 245)", "oklch(35% 0.045 245)", "oklch(45% 0.045 245)", "oklch(55% 0.045 245)", "oklch(70% 0.045 245)", "oklch(85% 0.045 245)", "oklch(96% 0.045 245)"] },
-      "night": { "role": "neutral", "displayName": "Midnight Navy", "canonical": "#101d2a", "tonalRamp": ["oklch(15% 0.025 245)", "oklch(25% 0.025 245)", "oklch(35% 0.025 245)", "oklch(45% 0.025 245)", "oklch(55% 0.025 245)", "oklch(70% 0.025 245)", "oklch(85% 0.025 245)", "oklch(96% 0.025 245)"] },
-      "status-blue": { "role": "secondary", "displayName": "Status Blue", "canonical": "#4b7fb0", "tonalRamp": ["oklch(15% 0.07 250)", "oklch(25% 0.07 250)", "oklch(35% 0.07 250)", "oklch(45% 0.07 250)", "oklch(55% 0.07 250)", "oklch(70% 0.07 250)", "oklch(85% 0.07 250)", "oklch(96% 0.07 250)"] },
-      "status-green": { "role": "secondary", "displayName": "Status Green", "canonical": "#658350", "tonalRamp": ["oklch(15% 0.07 130)", "oklch(25% 0.07 130)", "oklch(35% 0.07 130)", "oklch(45% 0.07 130)", "oklch(55% 0.07 130)", "oklch(70% 0.07 130)", "oklch(85% 0.07 130)", "oklch(96% 0.07 130)"] },
-      "button-text": { "role": "neutral", "displayName": "Warm White", "canonical": "#fffaf1", "tonalRamp": ["oklch(15% 0.01 85)", "oklch(25% 0.01 85)", "oklch(35% 0.01 85)", "oklch(45% 0.01 85)", "oklch(55% 0.01 85)", "oklch(70% 0.01 85)", "oklch(85% 0.01 85)", "oklch(98% 0.01 85)"] }
+      "navy": {
+        "role": "primary",
+        "displayName": "Shirt Navy",
+        "canonical": "#0e1b3f"
+      },
+      "navy-2": {
+        "role": "neutral",
+        "displayName": "Navy Panel",
+        "canonical": "#16234c"
+      },
+      "navy-3": {
+        "role": "neutral",
+        "displayName": "Collar Navy",
+        "canonical": "#1c2a55"
+      },
+      "studio": {
+        "role": "primary",
+        "displayName": "Studio Grey",
+        "canonical": "#efefef"
+      },
+      "studio-2": {
+        "role": "neutral",
+        "displayName": "Studio Panel",
+        "canonical": "#e3e2e3"
+      },
+      "studio-3": {
+        "role": "neutral",
+        "displayName": "Studio Shade",
+        "canonical": "#d6d6da"
+      },
+      "ink-on-navy": {
+        "role": "neutral",
+        "displayName": "Ink on Navy",
+        "canonical": "#f2f2f2"
+      },
+      "ink-2-on-navy": {
+        "role": "neutral",
+        "displayName": "Reading on Navy",
+        "canonical": "#c9cfdd"
+      },
+      "muted-on-navy": {
+        "role": "neutral",
+        "displayName": "Muted on Navy",
+        "canonical": "#9aa4bf"
+      },
+      "ink-on-studio": {
+        "role": "neutral",
+        "displayName": "Ink on Studio",
+        "canonical": "#0e1b3f"
+      },
+      "ink-2-on-studio": {
+        "role": "neutral",
+        "displayName": "Reading on Studio",
+        "canonical": "#2b3a63"
+      },
+      "muted-on-studio": {
+        "role": "neutral",
+        "displayName": "Muted on Studio",
+        "canonical": "#535e7a"
+      },
+      "ok": {
+        "role": "secondary",
+        "displayName": "Measured OK",
+        "canonical": "#6fe39a"
+      },
+      "ok-on-studio": {
+        "role": "secondary",
+        "displayName": "Measured OK on Studio",
+        "canonical": "#1d8a4a"
+      },
+      "bad": {
+        "role": "secondary",
+        "displayName": "Measured Down",
+        "canonical": "#ff8a8a"
+      },
+      "bad-on-studio": {
+        "role": "secondary",
+        "displayName": "Measured Down on Studio",
+        "canonical": "#c2333f"
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Editorial Display", "purpose": "Hero and section headlines." },
-      "body": { "displayName": "Manrope", "purpose": "Paragraphs, navigation, and controls." },
-      "label": { "displayName": "DM Mono", "purpose": "Indices, dates, and compact metadata." }
+      "display": {
+        "family": "Archivo",
+        "axes": "wdth 62..125, wght 400..800"
+      },
+      "data": {
+        "family": "Martian Mono",
+        "use": "measured data only"
+      }
     },
-    "shadows": [
-      { "name": "command-palette", "value": "0 16px 32px -14px rgba(0,0,0,.45)", "purpose": "Floats the command palette above the page." }
-    ],
-    "motion": [
-      { "name": "portfolio-ease", "value": "cubic-bezier(.2, .75, .25, 1)", "purpose": "Used for select control and drawer transitions." },
-      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Suppresses transitions and smooth scrolling for users who request reduced motion." }
-    ],
-    "breakpoints": [
-      { "name": "tablet", "value": "980px" },
-      { "name": "mobile", "value": "720px" }
-    ]
+    "shadows": {
+      "board": "0 24px 60px -30px rgba(0,0,0,0.7)",
+      "dialog": "0 30px 80px -20px rgba(0,0,0,0.8)"
+    },
+    "motion": {
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "signature": "status rows resolve 140ms apart as live results arrive"
+    },
+    "breakpoints": {
+      "nav": "1080px",
+      "stack": "820px",
+      "phone": "560px"
+    }
   },
   "components": [
-    {
-      "name": "Primary Button",
-      "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Compact blue action used for the main portfolio pathway.",
-      "html": "<button class=\"ds-btn-primary\">Explore selected work</button>",
-      "css": ".ds-btn-primary { min-height: 48px; padding: 0 19px; border: 1px solid transparent; border-radius: 5px; background: #1567d8; color: #fffaf1; font: 700 .72rem Manrope, sans-serif; cursor: pointer; transition: transform .25s cubic-bezier(.2,.75,.25,1), background .25s ease, outline-color .2s ease; } .ds-btn-primary:hover { background: #0c4f9f; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid #1567d8; outline-offset: 4px; }"
-    },
-    {
-      "name": "Secondary Button",
-      "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Outlined contact action beside the primary link.",
-      "html": "<button class=\"ds-btn-secondary\">Let's talk</button>",
-      "css": ".ds-btn-secondary { min-height: 48px; padding: 0 19px; border: 1px solid #101f33; border-radius: 5px; background: transparent; color: #101f33; font: 700 .72rem Manrope, sans-serif; cursor: pointer; transition: transform .25s cubic-bezier(.2,.75,.25,1), background .25s ease, color .25s ease; } .ds-btn-secondary:hover { background: #101f33; color: #eef4fa; transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 3px solid #1567d8; outline-offset: 4px; }"
-    },
-    {
-      "name": "Text Field",
-      "kind": "input",
-      "refersTo": "input",
-      "description": "Pale, lightly bordered contact form field.",
-      "html": "<label class=\"ds-field\"><span>Name</span><input placeholder=\"Your name\" /></label>",
-      "css": ".ds-field { display: grid; gap: 7px; color: #334761; font: 700 .72rem Manrope, sans-serif; } .ds-field input { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #bcbfb5; border-radius: 3px; background: #f8faff; color: #101f33; font: 400 .72rem Manrope, sans-serif; transition: border-color .2s ease, box-shadow .2s ease; } .ds-field input:focus-visible { border-color: #1567d8; outline: 0; box-shadow: 0 0 0 2px rgba(39,110,176,.18); }"
-    },
-    {
-      "name": "Primary Navigation",
-      "kind": "nav",
-      "description": "Sticky paper navigation with a fine lower rule.",
-      "html": "<nav class=\"ds-nav\"><strong>Sufyan Mohammed Farooq</strong><a href=\"#work\">Work</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; gap: 24px; min-height: 70px; padding: 0 28px; border-bottom: 1px solid #bdc9da; background: rgba(238,244,250,.97); color: #334761; font: 600 .72rem Manrope, sans-serif; } .ds-nav strong { margin-right: auto; color: #101f33; font: 700 1.25rem/1.1 Pliant, 'Bricolage Grotesque', Manrope, sans-serif; letter-spacing: -.02em; } .ds-nav a:hover { color: #0c4f9f; } .ds-nav a:focus-visible { outline: 3px solid #1567d8; outline-offset: 4px; }"
-    },
-    {
-      "name": "Project Media",
-      "kind": "card",
-      "refersTo": "project-media",
-      "description": "A rectangular media window where the project interface leads.",
-      "html": "<div class=\"ds-project-media\"><span>Project interface</span></div>",
-      "css": ".ds-project-media { display: flex; aspect-ratio: 1.65; align-items: center; justify-content: center; overflow: hidden; background: #e2eaf5; color: #101f33; }"
-    },
-    {
-      "name": "Metadata Tag",
-      "kind": "chip",
-      "description": "Small outlined mono label used for categories and project metadata.",
-      "html": "<span class=\"ds-tag\">REALTIME MULTIPLAYER</span>",
-      "css": ".ds-tag { display: inline-flex; padding: 3px 7px; border: 1px solid #bdc9da; border-radius: 2px; color: #53647b; font: 500 .72rem DM Mono, monospace; letter-spacing: .025em; text-transform: uppercase; }"
-    }
+    "status-board",
+    "status-chip",
+    "log-row",
+    "flow-step",
+    "button-signal",
+    "button-line",
+    "command-palette"
   ],
-  "narrative": {
-    "northStar": "Editorial Field Notes",
-    "overview": "The portfolio reads like a considered field journal about useful technology: clear section numbering, monospaced annotations, fine rules, and confident typography organize the story. Cool paper surfaces and deep navy ink keep the page calm and legible, while blue marks the key actions, links, and ideas that deserve emphasis. The portrait and project interfaces remain the authentic evidence at the center of the experience.\n\nThe visual system pairs editorial structure with practical clarity. Its spacing gives each project and career detail room to be read, while repeated labels and hairlines make a long single-page portfolio easy to scan. Blue and navy carry the chosen identity; the slate-blue secondary tone softens supporting details.",
-    "keyCharacteristics": [
-      "Cool blue paper, deep navy ink, and a decisive blue accent.",
-      "Numbered field-note labels set in DM Mono.",
-      "Large, compact display headlines paired with readable Manrope body copy.",
-      "Fine rules and restrained corner rounding keep the work in focus."
-    ],
-    "rules": [
-      { "name": "The Blue Signal Rule", "body": "Reserve the strongest blue for actions, focus, active emphasis, and small editorial signals; let the pale paper and navy ink do most of the work.", "section": "colors" },
-      { "name": "The Three Voices Rule", "body": "Use the display face for hierarchy, Manrope for reading and interaction, and DM Mono for annotation; do not use the mono face for paragraph copy.", "section": "typography" }
-    ],
-    "dos": [
-      "Do use the paper, ink, and accent tokens for page surfaces, text, and actions.",
-      "Do use fine rules and mono annotations to support scanning across the long portfolio.",
-      "Do keep the supplied portrait and project interfaces photographic and recognizable.",
-      "Do preserve visible keyboard focus and the reduced-motion accommodation."
-    ],
-    "donts": [
-      "Don't introduce unrelated accent colors into the portfolio chrome.",
-      "Don't place project screenshots inside generic elevated cards; let the artifact lead.",
-      "Don't use rounded pill shapes as the default form for controls or metadata."
-    ]
-  }
+  "narrative": "The ops console that checks itself, in the navy and studio grey of the portrait."
 }

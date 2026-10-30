@@ -8,7 +8,7 @@ const { spawn } = require('node:child_process');
 const { once } = require('node:events');
 const vm = require('node:vm');
 
-test('footer displays unique visitors rather than total visits', async () => {
+test('visit counter shows unique visitors when the page includes it', async () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'script.js'), 'utf8');
   const code = source.slice(source.indexOf('  async function recordVisit()'), source.indexOf('  // ---------- DOM Ready Bootstrapper'));
   for (const [totalUnique, expected] of [[2, '2 unique visitors'], [1, '1 unique visitor'], [0, '0 unique visitors'], [undefined, null]]) {
@@ -43,7 +43,7 @@ test('stats exposes the saved total and records visits without losing history', 
   await new Promise((resolve) => socket.close(resolve));
   child = spawn(process.execPath, ['server.js'], {
     cwd: directory,
-    env: { ...process.env, PORT: String(port), VISIT_SALT: 'ci-only', NODE_PATH: path.join(__dirname, '..', 'node_modules') },
+    env: { ...process.env, PORT: String(port), VISIT_SALT: 'ci-only', STATUS_CHECKS: 'off', NODE_PATH: path.join(__dirname, '..', 'node_modules') },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   await new Promise((resolve, reject) => {

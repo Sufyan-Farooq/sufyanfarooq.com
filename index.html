@@ -3,40 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#eef4fa" />
-  <title>Sufyan Farooq | Application Support, Development & Cloud</title>
-  <meta name="description" content="Application support professional in Jeddah with 3+ years of experience, plus web development, automation and cloud deployment projects. Explore my work, download my CV, or discuss a role." />
-  <meta name="keywords" content="Sufyan Farooq, software developer, business technology, full stack, IT support, Jeddah, Saudi Arabia" />
+  <meta name="theme-color" content="#0e1b3f" />
+  <meta name="color-scheme" content="dark" />
+  <title>Sufyan Farooq | Support engineer, DevOps &amp; automation</title>
+  <meta name="description" content="Support engineer in Jeddah with 3+ years keeping a university learning platform running for 2,000+ users. Builds and self-hosts web apps on Oracle Cloud with Docker and GitHub Actions, and automates work with Python, n8n and AI agents." />
   <meta name="author" content="Sufyan Mohammed Farooq" />
   <link rel="canonical" href="https://sufyanfarooq.com/" />
-  <meta property="og:title" content="Sufyan Farooq | Application Support, Development &amp; Cloud" />
-  <meta property="og:description" content="3+ years in application support, with hands-on development, automation and cloud projects. Based in Jeddah and open to full-time opportunities. View my work and download my CV." />
+  <meta property="og:title" content="Sufyan Farooq | Support engineer, DevOps &amp; automation" />
+  <meta property="og:description" content="Support engineer who builds, ships and runs real apps. 3+ years of production support, self-hosted deployments, CI/CD and AI automation. Jeddah, available now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sufyanfarooq.com/" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="assets/logo-128.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pliant:wght@700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header" id="navbar">
-    <nav class="nav-container" aria-label="Primary navigation">
-      <a href="#hero" class="nav-brand" aria-label="Sufyan Mohammed Farooq, home">
-        <span class="brand-block"><span class="brand-title">Sufyan Mohammed Farooq</span><span class="brand-role">SUPPORT / DEVELOPMENT</span></span>
+  <header class="topbar" id="navbar">
+    <nav class="topbar-inner" aria-label="Primary navigation">
+      <a href="#top" class="wordmark" aria-label="Sufyan Farooq, back to top">
+        <img class="wordmark-face" src="assets/profile.webp" alt="" width="680" height="1022" />
+        <span class="wordmark-text"><span class="wordmark-name">Sufyan Farooq</span><span class="wordmark-role">Jeddah, Saudi Arabia</span></span>
       </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Work</a>
-        <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="nav-link" download="Sufyan_Farooq_CV.pdf">Download CV</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <div class="topbar-links" id="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="nav-actions">
-        <span class="nav-location">Jeddah</span>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span></button>
+      <div class="topbar-actions">
+        <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-small btn-signal" target="_blank" rel="noopener">CV <i data-lucide="file-text" class="icon-xs" aria-hidden="true"></i></a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span></button>
       </div>
     </nav>
   </header>
@@ -44,218 +46,267 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
     <div class="mobile-drawer-links">
       <a href="#experience" class="mobile-link">Experience</a>
-      <a href="#projects" class="mobile-link">Selected work</a>
-      <a href="#skills" class="mobile-link">How I work</a>
-      <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="mobile-link" download="Sufyan_Farooq_CV.pdf">Download CV</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#pipeline" class="mobile-link">Pipeline</a>
+      <a href="#stack" class="mobile-link">Stack</a>
       <a href="#contact" class="mobile-link">Contact</a>
     </div>
-    <div class="mobile-drawer-footer"><p>Jeddah, Saudi Arabia · UTC+3</p><a href="mailto:sufyanfarooqsmf@gmail.com" class="mobile-email">sufyanfarooqsmf@gmail.com</a></div>
+    <p class="mobile-drawer-foot"><a href="mailto:sufyanfarooqsmf@gmail.com">sufyanfarooqsmf@gmail.com</a></p>
   </div>
 
   <main id="main-content">
-    <section id="hero" class="hero-section">
-      <div class="hero-container">
-        <div class="hero-text-column">
-          <p class="hero-location">01 <span>/</span> Introduction</p>
-          <h1 class="hero-headline">Application support.<br /><em>Development &amp; cloud.</em></h1>
-          <p class="hero-subline">3+ years helping university teams resolve application and API issues. I also build web applications, automate repetitive work, and deploy personal projects to the cloud.</p>
-          <p class="work-availability"><span class="availability-dot" aria-hidden="true"></span><strong>Open to full-time opportunities</strong></p>
-          <p class="target-roles">Application &amp; IT support · Junior web development · Cloud support &amp; junior DevOps</p>
-          <p class="work-details">Jeddah · Open to relocation · Transferable iqama · Available immediately</p>
-          <div class="hero-cta-group">
-            <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-primary" download="Sufyan_Farooq_CV.pdf" data-cv-download><span>Download CV <span class="btn-file-type">PDF</span></span><i data-lucide="download" class="icon-sm" aria-hidden="true"></i></a>
-            <a href="#contact" class="btn btn-secondary"><span>Discuss a role</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></a>
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Support engineer who builds, ships and runs real apps.</h1>
+          <p class="hero-lead">For 3+ years I've kept a university learning platform working for 2,000+ students and staff at Digival. On my own time I build web apps, deploy them myself on Oracle Cloud, and automate repetitive work with Python, n8n and AI agents. The board <span class="only-wide">beside this</span><span class="only-narrow">below</span> checks those apps right now.</p>
+          <a class="hero-proof" id="hero-proof" href="#status-board" hidden><span class="lamp" aria-hidden="true"></span><span id="hero-proof-text"></span></a>
+          <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>Available now in Jeddah, with a transferable iqama, and open to relocating. Looking for DevOps, cloud support, automation or application support roles.</p>
+          <div class="hero-actions">
+            <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-signal" target="_blank" rel="noopener">Open CV <span class="btn-meta">PDF</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></a>
+            <a href="#contact" class="btn btn-line">Contact me <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
           </div>
-          <a href="#projects" class="hero-work-link">Explore my work <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
         </div>
-        <div class="hero-visual-column">
-          <figure class="portrait-bento-card" id="portrait-card">
-            <picture class="portrait-picture"><img src="assets/plates/portrait.png" alt="Sufyan Mohammed Farooq" class="portrait-image" width="680" height="1022" fetchpriority="high" /></picture>
-          </figure>
-        </div>
-        <aside class="hero-aside" aria-label="How I approach technology">
-          <p class="aside-place">Jeddah</p>
-          <span class="aside-rule" aria-hidden="true"></span>
-          <p>Application support<br />Development<br />Automation &amp; cloud</p>
-          <span class="aside-rule" aria-hidden="true"></span>
-          <p>Arabic &amp; English<br />Available to join</p>
+
+        <aside class="board" id="status-board" aria-labelledby="board-title">
+          <div class="board-head">
+            <h2 class="board-title" id="board-title">Apps I built, checked live</h2>
+            <p class="board-summary" id="board-summary" aria-live="polite"><span class="lamp lamp--idle" aria-hidden="true"></span>Checking…</p>
+          </div>
+          <table class="board-table">
+            <thead><tr><th scope="col">App</th><th scope="col">Response</th><th scope="col">Speed</th><th scope="col">Uptime</th></tr></thead>
+            <tbody id="board-rows">
+              <tr data-service="riyasat"><th scope="row"><a href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener">Riyasat</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+              <tr data-service="naqlapp"><th scope="row"><a href="https://naqlapp.com/" target="_blank" rel="noopener">naqlapp</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+              <tr data-service="naql-tms"><th scope="row"><a href="https://app.naqlapp.com/" target="_blank" rel="noopener">Truck Dispatcher</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+              <tr data-service="mawarith"><th scope="row"><a href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener">Mawarith</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+              <tr data-service="turnup"><th scope="row"><a href="https://turnup.sufyanfarooq.com/" target="_blank" rel="noopener">TurnUp</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+              <tr data-service="omar"><th scope="row"><a href="https://omergloballlc.com/" target="_blank" rel="noopener">Omar Global</a></th><td class="data">…</td><td class="data">…</td><td class="data">…</td></tr>
+            </tbody>
+          </table>
+          <div class="board-foot">
+            <p id="board-foot">My server opens each app every 5 minutes and records whether it answered and how fast.</p>
+            <p id="board-incident"></p>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section id="experience" class="section experience-section">
-      <div class="section-container">
-        <div class="section-heading-row">
-          <p class="section-index">02 <span>/</span> Experience</p>
-          <h2 class="section-title">Application support<br /><em>at Digival.</em></h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-entry">
-            <div class="timeline-date">2023 — Present</div>
-            <div class="timeline-body"><h3 class="timeline-role">Senior Onsite Support Engineer</h3><p class="timeline-company">Digival IT Solutions <span>·</span> Jeddah, Saudi Arabia</p><p class="timeline-desc">Supported university learning-management platforms serving 2,000+ users, troubleshooting platform and API issues, coordinating escalations, guiding UAT, and training users. Progressed from Onsite Support Engineer to Senior Onsite Support Engineer, supervising one support colleague. After the onsite contract ended, provided intermittent remote team support.</p><ul class="timeline-highlights"><li>Built an API-driven exam-readiness dashboard that reduced daily verification from approximately two hours to under five minutes.</li><li>Maintained a 98% client satisfaction rating.</li><li>Triaged and coordinated 50+ enterprise bug escalations.</li><li>Created Arabic/English procedures and onboarding guides, translating academic workflows into development requirements.</li></ul><div class="timeline-tags"><span>Enterprise LMS</span><span>API diagnostics</span><span>Incident response</span><span>User training</span></div></div>
-          </article>
-        </div>
-        <div class="education-note"><span class="project-number">Education</span><p><strong>Master of Business Administration</strong> · In progress, final year <span> / </span> <strong>Bachelor of Computer Applications (BCA)</strong> · Osmania University</p></div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects-section">
-      <div class="section-container">
-        <div class="section-heading-row projects-heading">
-          <h2 class="section-index">03 <span>/</span> Selected work</h2>
-          <span class="projects-rule" aria-hidden="true"></span>
-          <p class="section-lead">Applications and websites I have built.</p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-3d-card project-card project-card--riyasat" data-tilt>
-            <a class="project-media project-media--riyasat" href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open Riyasat property management application">
-              <img src="assets/plates/riyasat-screen.png" alt="Riyasat public sign-in screen for private property management" width="1440" height="960" loading="lazy" />
-              <span class="media-open" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
-            <div class="project-info">
-              <h3 class="project-title">Riyasat</h3>
-              <p class="project-desc">A property management application for owners and families: rental agreements, payments, maintenance, and financial reporting with role-based access.</p>
-              <div class="project-meta-top project-meta-inline"><span class="project-number">01</span><span class="project-tag-pill">Property operations</span><span class="project-status-dot"><i class="dot-online"></i> Hosted app</span></div>
-              <div class="project-bottom"><div class="project-tech-pills"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div><div class="project-actions"><a href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener" class="project-link">Open app <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://github.com/Sufyan-Farooq/Riyasat" target="_blank" rel="noopener" class="project-link">Source <i data-lucide="github" class="icon-xs" aria-hidden="true"></i></a></div></div>
-            </div>
-          </article>
-
-
-
-          <article class="project-3d-card project-card project-card--naql" data-tilt>
-            <a class="project-media project-media--naql" href="https://naqlapp.com/" target="_blank" rel="noopener" aria-label="Visit the NAQL logistics website">
-              <img src="assets/naqlapp-preview.jpg" alt="NAQL logistics website showing transport, warehousing, and shipping services" width="1265" height="712" loading="lazy" />
-              <span class="media-open" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
-            <div class="project-info">
-              <div class="project-meta-top"><span class="project-number">02</span><span class="project-tag-pill">Landing page + TMS</span><span class="project-status-dot"><i class="dot-online"></i> Live site</span></div>
-              <h3 class="project-title">naqlapp</h3>
-              <p class="project-desc">Built naqlapp’s public logistics website and Truck Dispatcher, its transport management system (TMS). The website presents transport, warehousing, and shipping services. The TMS covers trip dispatch, fleet and driver assignments, delivery evidence, and billing readiness with company-scoped access.</p>
-              <div class="project-bottom"><div class="project-tech-pills"><span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div><div class="project-actions"><a href="https://naqlapp.com/" target="_blank" rel="noopener" class="project-link">View landing page <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://app.naqlapp.com/" target="_blank" rel="noopener" class="project-link">TMS sign-in <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a></div></div>
-              <p class="project-access-note">Truck Dispatcher requires an account. I can walk through the application during an interview.</p>
-            </div>
-          </article>
-
-          <article class="project-3d-card project-card project-card--omar" data-tilt>
-            <a class="project-media project-media--omar" href="https://omergloballlc.com/" target="_blank" rel="noopener" aria-label="Visit Omar Global LLC website">
-              <img src="assets/omerglobal-preview.png" alt="Omar Global LLC website preview for manpower supply and general contracting" width="1200" height="600" loading="lazy" />
-              <span class="media-open" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
-            <div class="project-info">
-              <div class="project-meta-top"><span class="project-number">03</span><span class="project-tag-pill">Business website</span><span class="project-status-dot"><i class="dot-online"></i> Live site</span></div>
-              <h3 class="project-title">Omar Global LLC</h3>
-              <p class="project-desc">A website for a Jeddah-based manpower supply and general contracting business, presenting services and helping clients make an enquiry.</p>
-              <div class="project-bottom"><span class="project-meta-note">Workforce · Contracting · Saudi Arabia</span><a href="https://omergloballlc.com/" target="_blank" rel="noopener" class="project-link">Visit website <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-
-
-
-          <article class="project-3d-card project-card project-card--mawarith" data-tilt>
-            <a class="project-media project-media--mawarith" href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open the live Mawarith inheritance calculator">
-              <img src="assets/plates/mawarith-screen.png" alt="Mawarith inheritance calculator showing a structured Arabic and English estate calculation interface" width="1159" height="946" loading="lazy" />
-              <span class="media-open" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
-            <div class="project-info">
-              <h3 class="project-title">Mawarith <span lang="ar" dir="rtl">مواريث</span></h3>
-              <p class="project-desc">Calculate inheritance shares based on Islamic law.</p>
-              <div class="project-meta-top project-meta-inline"><span class="project-number">04</span><span class="project-tag-pill">Inheritance calculator</span><span class="project-status-dot"><i class="dot-online"></i> Live · beta</span></div>
-              <div class="project-bottom"><div class="project-tech-pills"><span>Arabic UI</span><span>Inheritance shares</span><span>SAR</span></div><a href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener" class="project-link">Open Mawarith <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-        </div>
-
-        <details class="more-work">
-          <summary><span>More projects &amp; deployment work</span><span class="more-work-plus" aria-hidden="true">+</span></summary>
-          <div class="more-work-list">
-            <article><span class="project-number">05</span><div><h3>TurnUp — Personal multiplayer application</h3><p>Built realtime sessions and authentication with React, Node.js, and PostgreSQL. Configured Oracle Cloud deployment with Docker Compose and GitHub Actions, including health checks, database backups, and rollback.</p><p><a href="https://turnup.sufyanfarooq.com/" target="_blank" rel="noopener">Open live application</a> · <a href="https://github.com/Sufyan-Farooq/TurnUp.io" target="_blank" rel="noopener">View source</a></p></div><span class="project-meta-note">React · Node.js · Docker · GitHub Actions</span></article>
-
-            <article><span class="project-number">06</span><div><h3>Basil Bot</h3><p>A Discord game bot with team mechanics, scheduled regeneration, and persistent inventory.</p></div><span class="project-meta-note">Node.js · Discord.js · MongoDB</span></article>
-            <article><span class="project-number">07</span><div><h3>Dar Al-Hadith Portal</h3><p>An academic report-card lookup with a virtual Arabic keyboard, certificate image generation, and term-mark analytics.</p></div><span class="project-meta-note">HTML · CSS · JavaScript</span></article>
-
+    <section class="section theme-studio" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title" id="experience-title">Three years supporting a live university platform.</h2>
+          <div class="role-card">
+            <p class="role-name">Senior Onsite Support Engineer</p>
+            <p class="role-org">Digival IT Solutions · Jeddah · 2023 to present</p>
+            <p class="role-note">Learning-management platforms used by 2,000+ students, faculty and staff. Promoted from Onsite Support Engineer; supervised one support colleague.</p>
           </div>
-        </details>
+        </div>
+
+        <p class="log-legend" aria-hidden="true"><span>Problem</span><span>What I did</span><span>Result</span></p>
+        <ol class="log">
+          <li class="log-row">
+            <p class="log-problem">Exam staff spent about two hours a day checking that ~300 high-stakes exam sessions a year were ready.</p>
+            <p class="log-action">Built an API-driven exam-readiness dashboard (JavaScript, Axios) that shows every session's state in one view.</p>
+            <p class="log-result"><span class="data">2 h → &lt;5 min</span> per day</p>
+          </li>
+          <li class="log-row">
+            <p class="log-problem">Users hit login and data-sync faults that developers could not reproduce.</p>
+            <p class="log-action">Reproduced them with logs, Postman and cURL, then gave developers the exact failing request and steps.</p>
+            <p class="log-result"><span class="data">50+</span> defects escalated</p>
+          </li>
+          <li class="log-row">
+            <p class="log-problem">Platform emails were not reaching users.</p>
+            <p class="log-action">Traced the failures through the sending flow to queuing in the AWS email service and gave engineering the evidence to fix it.</p>
+            <p class="log-result">Root cause found</p>
+          </li>
+          <li class="log-row">
+            <p class="log-problem">The same questions kept coming back to the support desk.</p>
+            <p class="log-action">Wrote Arabic and English SOPs, runbooks and onboarding guides, and tested each release before it went live.</p>
+            <p class="log-result"><span class="data">−30%</span> response time</p>
+          </li>
+          <li class="log-row">
+            <p class="log-problem">Faculty and students across departments had to adopt the platform with little training.</p>
+            <p class="log-action">Ran onboarding sessions and acted as the go-between for the university and the development team.</p>
+            <p class="log-result"><span class="data">98%</span> satisfaction</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="about" class="section about-section">
-      <div class="section-container">
-        <div class="section-heading-row">
-          <p class="section-index">About me</p>
-          <h2 class="section-title">Support experience.<br /><em>A practical approach to building.</em></h2>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head section-head--wide">
+          <h2 class="section-title" id="work-title">Apps I built and keep online.</h2>
+          <p class="section-lead">A logistics system for a client, a self-hosted game platform with its own deploy pipeline, and two products of my own.</p>
         </div>
-        <div class="about-grid">
-          <p class="about-lead">I am looking for a team where I can put my support experience and development skills to work.</p>
-          <div class="about-copy">
-            <p>At Digival IT Solutions in Jeddah, I supported university users, worked with academic teams, and helped developers reproduce and resolve application issues. I progressed from Onsite Support Engineer to Senior Onsite Support Engineer.</p>
-            <p>Alongside that professional experience, I build web applications, business websites, and Python automation tools. My personal projects include cloud deployments, containers, and CI/CD workflows. I am open to application/IT support, junior web development, cloud support, and junior DevOps roles.</p>
-            <div class="language-tags" aria-label="Languages"><span class="lang-tag">English</span><span class="lang-tag">Arabic</span><span class="lang-tag">Urdu</span><span class="lang-tag">Hindi</span></div>
-          </div>
-          <div class="about-aside"><span class="aside-symbol" aria-hidden="true">↘</span><p>Arabic &amp; English.<br />Based in Jeddah.<br /><strong>Open to relocation.</strong></p></div>
-        </div>
-      </div>
-    </section>
 
-    <section id="skills" class="section approach-section">
-      <div class="section-container">
-        <div class="section-heading-row">
-          <p class="section-index">04 <span>/</span> How I work</p>
-          <h2 class="section-title">Start with the need.<br /><em>Build what helps.</em></h2>
+        <div class="projects">
+          <article class="project">
+            <a class="project-shot" href="https://naqlapp.com/" target="_blank" rel="noopener" aria-label="Visit naqlapp">
+              <img src="assets/naqlapp-preview.jpg" alt="naqlapp logistics website showing transport, warehousing and shipping services" width="1265" height="712" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-top"><h3 class="project-name">naqlapp</h3><span class="chip" data-status-for="naqlapp">checking</span></div>
+              <p>The public logistics website and Truck Dispatcher, its transport management system: trip dispatch, fleet and driver assignments, delivery evidence and billing readiness, with company-scoped access.</p>
+              <p class="project-stack">React · TypeScript · Node.js · PostgreSQL</p>
+              <p class="project-links"><a href="https://naqlapp.com/" target="_blank" rel="noopener">Website <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://app.naqlapp.com/" target="_blank" rel="noopener">TMS sign-in <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a></p>
+              <p class="project-note">The TMS is a client system behind a login, so there's no public source. I can walk you through it in an interview.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project-shot" href="https://turnup.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open TurnUp">
+              <img src="assets/plates/turnup-screen.png" alt="TurnUp multiplayer board game lobby" width="1440" height="960" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-top"><h3 class="project-name">TurnUp</h3><span class="chip" data-status-for="turnup">checking</span></div>
+              <p>Realtime multiplayer board games with accounts. I run it on Oracle Cloud with Docker Compose; GitHub Actions deploys each change, health checks gate it, the database is backed up, and a bad release can be rolled back.</p>
+              <p class="project-stack">React · Socket.io · PostgreSQL · Docker · GitHub Actions</p>
+              <p class="project-links"><a href="https://turnup.sufyanfarooq.com/" target="_blank" rel="noopener">Open app <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://github.com/Sufyan-Farooq/TurnUp.io" target="_blank" rel="noopener">Source <i data-lucide="github" class="icon-xs" aria-hidden="true"></i></a></p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project-shot" href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open Riyasat">
+              <img src="assets/plates/riyasat-screen.png" alt="Riyasat sign-in screen" width="1440" height="960" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-top"><h3 class="project-name">Riyasat</h3><span class="chip" data-status-for="riyasat">checking</span></div>
+              <p>Property management for owners and families: rental agreements, payments, maintenance and financial reports, with role-based access.</p>
+              <p class="project-stack">Next.js · TypeScript · Supabase</p>
+              <p class="project-links"><a href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener">Open app <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://github.com/Sufyan-Farooq/Riyasat" target="_blank" rel="noopener">Source <i data-lucide="github" class="icon-xs" aria-hidden="true"></i></a></p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project-shot" href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open Mawarith">
+              <img src="assets/plates/mawarith-screen.png" alt="Mawarith inheritance calculator with Arabic and English interface" width="1159" height="946" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-top"><h3 class="project-name">Mawarith <span lang="ar" dir="rtl">مواريث</span></h3><span class="chip" data-status-for="mawarith">checking</span></div>
+              <p>Public beta of a calculator for inheritance shares under Islamic law, with a typed calculation engine and an Arabic interface.</p>
+              <p class="project-stack">React · TypeScript · Arabic UI</p>
+              <p class="project-links"><a href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener">Open app <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></a><a href="https://github.com/Sufyan-Farooq/Mawarith" target="_blank" rel="noopener">Source <i data-lucide="github" class="icon-xs" aria-hidden="true"></i></a></p>
+            </div>
+          </article>
         </div>
-        <div class="approach-grid">
-          <article class="approach-step"><span class="approach-count">01</span><h3>Understand the day-to-day</h3><p>Listen to the people doing the work. Find where a handoff, system, or repeated task is slowing them down.</p></article>
-          <article class="approach-step"><span class="approach-count">02</span><h3>Make the problem concrete</h3><p>Map the workflow, constraints, and decisions so the right solution is clear before the build gets complicated.</p></article>
-          <article class="approach-step"><span class="approach-count">03</span><h3>Build for real use</h3><p>Ship dependable software, explain it clearly, and support people as it becomes part of how they work.</p></article>
-        </div>
-        <div class="stack-ledger">
-          <div class="stack-ledger-heading"><h3>Tools I reach for</h3><p>Chosen for the problem at hand.</p></div>
-          <dl class="stack-groups">
-            <div><dt>Web development</dt><dd>React · Next.js · TypeScript · HTML · CSS</dd></div>
-            <div><dt>Data &amp; realtime</dt><dd>Node.js · Express · WebSockets · PostgreSQL · MongoDB</dd></div>
-            <div><dt>APIs &amp; automation</dt><dd>REST APIs · Postman · Browser DevTools · Python · SQLite</dd></div>
-            <div><dt>Cloud &amp; deployment projects</dt><dd>Oracle Cloud · Linux · SSH · Docker Compose · GitHub Actions · CI/CD</dd></div>
-            <div><dt>Additional coursework</dt><dd>AWS EC2 · Kubernetes · Terraform · Prometheus · Grafana</dd></div>
-            <div><dt>People &amp; operations</dt><dd>LMS support · UAT · stakeholder coordination · documentation</dd></div>
-          </dl>
+
+        <div class="ledger">
+          <section class="ledger-group" aria-labelledby="ai-title">
+            <h3 class="ledger-title" id="ai-title">AI agents &amp; automation</h3>
+            <ul>
+              <li><p class="ledger-name">Bilingual voice booking agent</p><p>Answers enquiries in Arabic or English, checks calendar availability, books or reschedules, and hands off to a human when it should. Tested against unclear requests, full slots and API failures.</p><p class="ledger-stack">Vapi/Retell · OpenAI · n8n · webhooks · Google Calendar</p></li>
+              <li><p class="ledger-name">WhatsApp AI sales agent</p><p>Qualifies travel leads from Meta click-to-WhatsApp ads, pulls out trip requirements, looks up package prices and passes qualified leads to consultants, in Arabic and English.</p><p class="ledger-stack">n8n · OpenAI tool calling · WhatsApp Business API · Google Sheets</p></li>
+              <li><p class="ledger-name">Health monitoring daemon</p><p>A Python service that polls endpoints, records latency and status codes in SQLite, and alerts with exponential backoff.</p><p class="ledger-stack">Python · SQLite · REST</p></li>
+              <li><p class="ledger-name">Everyday automation</p><p>Python, Bash and PowerShell scripts for repetitive checking and formatting work. I also use AI coding agents to plan, build, review and debug.</p><p class="ledger-stack">Python · Bash · PowerShell · Claude Code</p></li>
+            </ul>
+          </section>
+          <section class="ledger-group" aria-labelledby="other-title">
+            <h3 class="ledger-title" id="other-title">Other work</h3>
+            <ul>
+              <li><p class="ledger-name">Omar Global LLC website</p><p>A site for a Jeddah manpower supply and contracting business that presents its services and takes enquiries. <a href="https://omergloballlc.com/" target="_blank" rel="noopener">Visit</a></p><p class="ledger-stack">Business website</p></li>
+              <li><p class="ledger-name">Kubernetes, GitOps &amp; monitoring labs</p><p>Training work: Deployments, Ingress, storage, RBAC and autoscaling; Helm charts delivered with Argo CD; Prometheus and Grafana dashboards with PromQL.</p><p class="ledger-stack">Kubernetes · Helm · Argo CD · Prometheus · Grafana</p></li>
+              <li><p class="ledger-name">Basil Bot</p><p>A Discord game bot with team mechanics, scheduled regeneration and persistent inventory.</p><p class="ledger-stack">Node.js · Discord.js · MongoDB</p></li>
+              <li><p class="ledger-name">Dar Al-Hadith portal</p><p>Report-card lookup with an on-screen Arabic keyboard, certificate image generation and term-mark analytics.</p><p class="ledger-stack">HTML · CSS · JavaScript</p></li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
 
-
-
-
-
-    <section id="contact" class="section contact-section">
-      <div class="section-container">
-        <div class="contact-topline"><p class="section-index">05 <span>/</span> Start a conversation</p><span class="contact-location"><span class="status-dot-static"></span> Jeddah, Saudi Arabia · <span id="hero-clock">UTC+3</span></span></div>
-        <div class="contact-heading"><h2 class="section-title">Let's discuss<br /><em>an opportunity.</em></h2><p class="section-lead">Hiring for application/IT support, junior web development, cloud support, or junior DevOps? I am available immediately and would welcome a short interview or practical assessment. I can also walk you through my work.</p></div>
-        <div class="contact-layout">
-          <div class="contact-info-col">
-            <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="contact-channel-item cv-download" download="Sufyan_Farooq_CV.pdf"><span class="channel-label">CV / PDF</span><span class="channel-value">Download my CV</span><i data-lucide="download" aria-hidden="true"></i></a>
-            <a href="mailto:sufyanfarooqsmf@gmail.com" class="contact-channel-item"><span class="channel-label">Email</span><span class="channel-value">sufyanfarooqsmf@gmail.com</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            <a href="tel:+966544882306" class="contact-channel-item"><span class="channel-label">Phone / WhatsApp</span><span class="channel-value">+966 54 488 2306</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            <div class="contact-social-row"><a href="https://github.com/Sufyan-Farooq" target="_blank" rel="noopener" class="social-btn"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a><a href="https://www.linkedin.com/in/sufyanmfarooq/" target="_blank" rel="noopener" class="social-btn"><i data-lucide="linkedin" aria-hidden="true"></i><span>LinkedIn</span></a><button class="social-btn" id="copy-email-btn" aria-label="Copy email address"><i data-lucide="copy" aria-hidden="true"></i><span id="copy-btn-text">Copy email</span></button></div>
+    <section class="section theme-studio" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="wrap">
+        <div class="section-head section-head--wide">
+          <h2 class="section-title" id="pipeline-title">How this site ships.</h2>
+          <p class="section-lead">A push to <code>main</code> runs these steps. A commit only reaches the server if the checks pass.</p>
+        </div>
+        <ol class="flow">
+          <li><p class="flow-name">Push</p><p>A commit lands on <code>main</code>.</p></li>
+          <li><p class="flow-name">Check</p><p>GitHub Actions runs syntax checks, Node tests, a shell lint and a Docker build.</p></li>
+          <li><p class="flow-name">Deploy</p><p>SSH, with a pinned host key, to an Oracle Cloud VM that deploys that exact commit.</p></li>
+          <li><p class="flow-name">Run</p><p>Docker Compose with a memory cap, log rotation and a persistent stats volume, behind a reverse proxy.</p></li>
+          <li><p class="flow-name">Verify</p><p>The workflow requests the public site and API and fails the run if either is wrong.</p></li>
+        </ol>
+        <div class="pipeline-foot">
+          <div class="run" id="pipeline-run" hidden>
+            <span class="lamp" id="run-lamp" aria-hidden="true"></span>
+            <p class="run-text">Latest run <a class="data" id="run-link" href="https://github.com/Sufyan-Farooq/sufyanfarooq.com/actions" target="_blank" rel="noopener">on GitHub</a> <span id="run-title"></span></p>
+            <p class="run-meta data" id="run-meta"></p>
           </div>
-          <div class="contact-form-col">
-            <form id="contact-form" action="https://formspree.io/f/maqvoanj" method="POST" class="contact-form-box">
-              <div class="form-header"><h3 class="form-title">Send a message</h3><span class="form-badge">Hiring enquiries welcome</span></div>
-              <div class="form-row"><div class="form-group"><label for="name" class="form-label">Your name</label><input type="text" id="name" name="name" class="form-input" autocomplete="name" placeholder="Your name" required /></div><div class="form-group"><label for="email" class="form-label">Your email</label><input type="email" id="email" name="email" class="form-input" autocomplete="email" placeholder="you@example.com" required /></div></div>
-              <div class="form-group"><label for="subject" class="form-label">Subject</label><input type="text" id="subject" name="subject" class="form-input" placeholder="Role or opportunity" required /></div>
-              <div class="form-group"><label for="message" class="form-label">Message</label><textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Tell me about the role, team, and location." required></textarea></div>
-              <button type="submit" class="btn btn-primary btn-block" id="submit-btn"><span>Send message</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></button>
-              <div class="form-status" id="form-status" aria-live="polite"></div>
-            </form>
+          <p class="tradeoff"><strong>Why one VM?</strong> Traffic is small, and a single machine keeps every moving part visible to me. The trade-off is no redundancy: if the VM goes down, the site goes down with it. That is exactly the kind of outage the status board would record.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="wrap">
+        <div class="section-head section-head--wide">
+          <h2 class="section-title" id="stack-title">Tools, by where I've used them.</h2>
+          <p class="section-lead">What I use at work, what runs my own projects, and what I've only practised in training.</p>
+        </div>
+        <div class="stack">
+          <div class="stack-col">
+            <h3 class="stack-title">At work</h3>
+            <p>REST APIs, Postman, cURL, browser DevTools, log investigation, root-cause analysis, UAT and regression testing, incident escalation, bilingual runbooks and SOPs, user training.</p>
+          </div>
+          <div class="stack-col">
+            <h3 class="stack-title">In my projects</h3>
+            <p>Linux (Ubuntu, systemd, cron, SSH), Bash, Python, Docker and Compose, Nginx with TLS, GitHub Actions, Oracle Cloud, AWS EC2. React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB. n8n, OpenAI API, voice and WhatsApp agents, Claude Code.</p>
+          </div>
+          <div class="stack-col">
+            <h3 class="stack-title">In training</h3>
+            <p>Kubernetes, Helm, Argo CD, Prometheus, Grafana, AWS ECS, EKS and load balancing. Currently learning Terraform.</p>
           </div>
         </div>
+        <dl class="education">
+          <div><dt>Education</dt><dd>Bachelor of Computer Applications, Osmania University. MBA in progress, final year.</dd></div>
+          <div><dt>Course</dt><dd>100xDevs web development and DevOps.</dd></div>
+          <div><dt>Languages</dt><dd>Arabic, English, Hindi, Urdu.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section--contact theme-studio" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <img class="contact-portrait" src="assets/profile.webp" alt="Sufyan Farooq" width="680" height="1022" loading="lazy" />
+          <div>
+            <h2 class="section-title" id="contact-title">I can start immediately.</h2>
+            <p class="section-lead">Email or WhatsApp me, or use the form. I'm happy to do a practical assessment and to walk you through any project on this page.</p>
+            <ul class="channels">
+              <li><a href="mailto:sufyanfarooqsmf@gmail.com"><span class="channel-label">Email</span><span class="channel-value">sufyanfarooqsmf@gmail.com</span></a><button type="button" class="copy-btn" id="copy-email-btn" aria-label="Copy email address"><i data-lucide="copy" class="icon-xs" aria-hidden="true"></i><span id="copy-btn-text">Copy</span></button></li>
+              <li><a href="https://wa.me/966544882306" target="_blank" rel="noopener"><span class="channel-label">WhatsApp</span><span class="channel-value">+966 54 488 2306</span></a></li>
+              <li><a href="tel:+966544882306"><span class="channel-label">Phone</span><span class="channel-value">+966 54 488 2306</span></a></li>
+              <li><a href="https://www.linkedin.com/in/sufyanmfarooq/" target="_blank" rel="noopener"><span class="channel-label">LinkedIn</span><span class="channel-value">in/sufyanmfarooq</span></a></li>
+              <li><a href="https://github.com/Sufyan-Farooq" target="_blank" rel="noopener"><span class="channel-label">GitHub</span><span class="channel-value">Sufyan-Farooq</span></a></li>
+              <li><a href="assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener"><span class="channel-label">CV</span><span class="channel-value">Open PDF</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/maqvoanj" method="POST" class="form">
+          <h3 class="form-title">Send a message</h3>
+          <div class="form-row">
+            <label class="field"><span>Your name</span><input type="text" name="name" autocomplete="name" required /></label>
+            <label class="field"><span>Your email</span><input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <label class="field"><span>Subject</span><input type="text" name="subject" placeholder="Role or project" required /></label>
+          <label class="field"><span>Message</span><textarea name="message" rows="5" placeholder="The role, team and location." required></textarea></label>
+          <button type="submit" class="btn btn-signal" id="submit-btn">Send message <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="footer-container"><a href="#hero" class="footer-brand"><img src="assets/logo-64.webp" alt="" class="brand-logo-img" width="32" height="32" /><span>Sufyan Mohammed Farooq</span></a><p class="footer-tagline">Application support, development, and automation. Open to my next role.</p><div class="footer-bottom-row"><p class="footer-copy">© 2026 Sufyan Mohammed Farooq</p><div class="footer-nav"><a href="#projects">Work</a><a href="#experience">Experience</a><a href="assets/cv/Sufyan_Farooq_CV.pdf" download="Sufyan_Farooq_CV.pdf">Download CV</a><a href="#contact">Contact</a><button type="button" class="footer-quick-action" id="cmdk-trigger-btn" aria-label="Open quick actions"><i data-lucide="command" class="icon-xs" aria-hidden="true"></i> Quick actions</button><span class="footer-visit-count" id="footer-visit-count" hidden></span><span class="footer-time" id="local-time-num">Jeddah, UTC+3</span></div></div></div></footer>
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p class="footer-name">Sufyan Mohammed Farooq</p>
+      <p>Built and self-hosted by me on Oracle Cloud · © 2026</p>
+    </div>
+  </footer>
 
-  <div class="cmdk-overlay" id="cmdk-modal" hidden aria-hidden="true"><div class="cmdk-dialog" role="dialog" aria-modal="true" aria-label="Portfolio quick actions"><div class="cmdk-header"><i data-lucide="search" class="cmdk-search-icon" aria-hidden="true"></i><input type="text" id="cmdk-input" class="cmdk-input" placeholder="Jump to a project or section…" autocomplete="off" spellcheck="false" /><button class="cmdk-esc-kbd" id="cmdk-close-btn" aria-label="Close command palette">ESC</button></div><div class="cmdk-list" id="cmdk-list" role="listbox"></div><div class="cmdk-footer"><span>Use <kbd>↑</kbd> <kbd>↓</kbd> to move</span><span><kbd>↵</kbd> to select</span><span><kbd>ESC</kbd> to close</span></div></div></div>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
