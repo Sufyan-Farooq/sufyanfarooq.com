@@ -138,6 +138,8 @@ const SERVICES = [
   { id: 'mawarith', name: 'Mawarith', url: 'https://mawarith.sufyanfarooq.com/' },
   { id: 'turnup', name: 'TurnUp', url: 'https://turnup.sufyanfarooq.com/' },
   { id: 'omar', name: 'Omar Global', url: 'https://omergloballlc.com/' },
+  { id: 'qaswa', name: 'Qaswa AI', url: 'https://qaswaai.com/' },
+  { id: 'qaswa-desk', name: 'Qaswa Desk', url: 'https://desk.qaswaai.com/' },
 ];
 const CHECK_INTERVAL_MS = 5 * 60 * 1000;
 const HISTORY_LIMIT = 288; // 24 hours of 5-minute checks

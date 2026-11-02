@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Visitors to Sufyan's personal portfolio: prospective employers are the current priority, alongside clients and collaborators.
+Since 2 November 2026 the site is client-first: small and growing businesses looking for websites, custom web apps, AI agents and automation, and hosting. Recruiters are the secondary audience, served by the About section, a "Hiring?" note and the CV.
 
 ## Product Purpose
 
@@ -16,7 +16,9 @@ Present Sufyan Mohammed Farooq as a builder who uses technology to solve busines
 
 ## Positioning
 
-Updated 30 October 2026 at the user's request: an ops and automation builder. Headline: "I keep systems running and automate the rest." The foundation is 3+ years of production support at Digival. The proof is self-hosted apps, CI/CD, AI agent automation and scripting. Target roles: DevOps and cloud support, automation and AI agents, application support. Do not claim a DevOps job title or DevOps employment. Label Kubernetes, Helm, Argo CD, Prometheus and Grafana as training. Describe websites by what was delivered rather than emphasizing payment. Do not add claims beyond the confirmed experience, the user's CVs (DevOps, Agent Engineer, latest; October 2026) and project sources.
+Updated 2 November 2026 at the user's request: client-first services site, CV kept. Headline: "Websites, apps and AI automation that stay online." Page order: hero with status board → services (business websites; custom web apps and internal tools; AI agents and automation; hosting, deployment and care) → work (naqlapp, Omar Global, Riyasat, Mawarith, then the AI/automation and other-work ledgers) → process (call, quote, build, launch, look after, with the latest pipeline run) → about (Digival log, tools, education, "Hiring?" note with CV) → contact (form asks "What do you need?", including "A job opportunity"). Qaswa AI (https://qaswaai.com/, WhatsApp AI receptionist for Saudi clinics) and its clinic portal Qaswa Desk (https://desk.qaswaai.com/, login only) were added 2 November 2026 as the featured "building now" product; describe them only from what the public landing page states. No prices are published: every project gets a written scope and fixed quote after a free call. Do not add prices, testimonials or client outcomes the user has not supplied.
+
+Earlier positioning, kept for the About section and CV — updated 30 October 2026 at the user's request: an ops and automation builder. Headline: "I keep systems running and automate the rest." The foundation is 3+ years of production support at Digival. The proof is self-hosted apps, CI/CD, AI agent automation and scripting. Target roles: DevOps and cloud support, automation and AI agents, application support. Do not claim a DevOps job title or DevOps employment. Label Kubernetes, Helm, Argo CD, Prometheus and Grafana as training. Describe websites by what was delivered rather than emphasizing payment. Do not add claims beyond the confirmed experience, the user's CVs (DevOps, Agent Engineer, latest; October 2026) and project sources.
 
 Confirmed from the user's CVs: ~300 exam sessions a year behind the dashboard; AWS email delivery queuing diagnosis; 30% reduction in ticket response times from bilingual documentation; bilingual voice booking agent (Vapi/Retell, OpenAI, n8n); Meta click-to-WhatsApp AI sales agent (n8n, OpenAI, WhatsApp Business API); Python health monitoring daemon; AI coding agents in daily work. Not used publicly: the "99%+ SLA" and "Reliability Coordinator" title variants from older CVs, and private client repos (customs clearance, Bulker, others). The user said private work cannot be disclosed yet.
 
@@ -42,8 +44,8 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 
 ## Open Decisions
 
-- Employment is the current priority. Show immediate availability, transferable iqama, Jeddah location, and relocation flexibility.
-- Lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
+- Superseded 2 November 2026: clients come first. Availability for employment (transferable iqama, Jeddah, open to relocating, target roles) now lives in the About section's "Hiring?" note, not the hero.
+- Previously: lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
 - Offer the CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Since 30 October 2026 it is generated from `assets/cv/cv.html` (same navy and studio-grey look as the site) by printing that page to PDF with headless Chrome; edit the HTML, then re-export. Keep it consistent with the role-specific CVs in the jobs-mail workspace.
 - Education is BCA (Osmania University, graduated 2025), with MBA in progress in the final year. Digival start date: March 2023 (confirmed by the user 30 October 2026). Professional DevOps employment is not claimed.
 

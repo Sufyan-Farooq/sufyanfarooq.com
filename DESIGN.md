@@ -118,7 +118,7 @@ Tokens are semantic (`--ground`, `--panel`, `--ink`, `--ink-2`, `--muted`, `--si
 
 ## Typography
 
-The hero states one identity ("Support engineer who builds, ships and runs real apps.") and names target roles once, in the availability sentence. Do not add keyword rows or middot metadata strips; write sentences.
+The hero states one offer ("Websites, apps and AI automation that stay online.") and one availability sentence about taking on projects. Target roles are named once, in the About section's "Hiring?" note. Do not add keyword rows or middot metadata strips; write sentences.
 
 **Archivo** carries every voice through its width axis: expanded (wdth 110–118) for display, headings and the wordmark; normal width for reading. **Martian Mono** is used strictly for measured or machine data: HTTP codes, latency, uptime, timestamps, commit hashes, stack lines and key numbers. It is never used for paragraphs or as a "technical" costume.
 
