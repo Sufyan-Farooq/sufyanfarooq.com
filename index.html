@@ -9,10 +9,54 @@
   <meta name="description" content="Business websites, custom web apps and AI agents for WhatsApp and voice, built in Arabic and English, then hosted and looked after. Fixed quote after a free call. Based in Jeddah, Saudi Arabia." />
   <meta name="author" content="Sufyan Mohammed Farooq" />
   <link rel="canonical" href="https://sufyanfarooq.com/" />
+  <link rel="alternate" hreflang="en" href="https://sufyanfarooq.com/" />
+  <link rel="alternate" hreflang="ar" href="https://sufyanfarooq.com/ar/" />
+  <link rel="alternate" hreflang="x-default" href="https://sufyanfarooq.com/" />
   <meta property="og:title" content="Sufyan Farooq | Websites, web apps &amp; AI automation" />
   <meta property="og:description" content="I build websites, custom apps and AI automation for businesses, in Arabic and English, then host and look after them. Jeddah, Saudi Arabia." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sufyanfarooq.com/" />
+  <meta property="og:site_name" content="Sufyan Farooq" />
+  <meta property="og:image" content="https://sufyanfarooq.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sufyan Farooq: websites, apps and AI automation that stay online. Jeddah, Saudi Arabia." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://sufyanfarooq.com/#business",
+    "name": "Sufyan Farooq",
+    "url": "https://sufyanfarooq.com/",
+    "image": "https://sufyanfarooq.com/assets/og.png",
+    "logo": "https://sufyanfarooq.com/assets/logo-512.png",
+    "description": "Business websites, custom web apps and AI agents for WhatsApp and voice, built in Arabic and English, then hosted and looked after.",
+    "telephone": "+966544882306",
+    "email": "sufyanfarooqsmf@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Jeddah", "addressCountry": "SA" },
+    "areaServed": { "@type": "Country", "name": "Saudi Arabia" },
+    "knowsLanguage": ["ar", "en", "hi", "ur"],
+    "sameAs": ["https://www.linkedin.com/in/sufyanmfarooq/", "https://github.com/Sufyan-Farooq"],
+    "founder": {
+      "@type": "Person",
+      "name": "Sufyan Mohammed Farooq",
+      "url": "https://sufyanfarooq.com/",
+      "image": "https://sufyanfarooq.com/assets/profile.jpg",
+      "sameAs": ["https://www.linkedin.com/in/sufyanmfarooq/", "https://github.com/Sufyan-Farooq"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business websites" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom web apps and internal tools" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI agents and automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hosting, deployment and care" } }
+      ]
+    }
+  }
+  </script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="assets/logo-128.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +81,7 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="topbar-actions">
+        <a href="/ar/" class="lang-link" lang="ar" hreflang="ar">العربية</a>
         <a href="#contact" class="btn btn-small btn-signal">Start a project <i data-lucide="arrow-down-right" class="icon-xs" aria-hidden="true"></i></a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span></button>
       </div>
@@ -52,7 +97,7 @@
       <a href="#contact" class="mobile-link">Contact</a>
       <a href="#contact" class="btn btn-signal mobile-cta">Start a project <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
     </div>
-    <p class="mobile-drawer-foot"><a href="mailto:sufyanfarooqsmf@gmail.com">sufyanfarooqsmf@gmail.com</a></p>
+    <p class="mobile-drawer-foot"><a href="https://wa.me/966544882306?text=Hi%20Sufyan%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">WhatsApp +966 54 488 2306</a> · <a href="mailto:sufyanfarooqsmf@gmail.com">sufyanfarooqsmf@gmail.com</a></p>
   </div>
 
   <main id="main-content">
@@ -65,6 +110,7 @@
           <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>Taking on new projects. You get a fixed quote after a free call.</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-signal">Start a project <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
+            <a href="https://wa.me/966544882306?text=Hi%20Sufyan%2C%20I%27d%20like%20to%20talk%20about%20a%20project." class="btn btn-line" target="_blank" rel="noopener"><i data-lucide="message-circle" class="icon-sm" aria-hidden="true"></i> WhatsApp me</a>
             <a href="#work" class="btn btn-line">See my work <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -73,7 +119,9 @@
           <div class="board-head">
             <h2 class="board-title" id="board-title">Apps I built, checked live</h2>
             <p class="board-summary" id="board-summary" aria-live="polite"><span class="lamp lamp--idle" aria-hidden="true"></span>Checking…</p>
+            <button type="button" class="board-toggle" id="board-toggle" aria-expanded="false" aria-controls="board-details">Show each app</button>
           </div>
+          <div class="board-details" id="board-details">
           <table class="board-table">
             <thead><tr><th scope="col">App</th><th scope="col">Response</th><th scope="col">Speed</th><th scope="col">Uptime</th></tr></thead>
             <tbody id="board-rows">
@@ -90,6 +138,7 @@
           <div class="board-foot">
             <p id="board-foot">My server opens each app every 5 minutes and records whether it answered and how fast.</p>
             <p id="board-incident"></p>
+          </div>
           </div>
         </aside>
       </div>
@@ -271,6 +320,15 @@
           </div>
           <p class="tradeoff"><strong>This site runs the same way.</strong> Every change goes through automated checks before it reaches the server, and the deploy confirms the live site answers afterwards. The panel shows its latest real run.</p>
         </div>
+        <h3 class="subhead" id="faq-title">Common questions</h3>
+        <dl class="faq" aria-labelledby="faq-title">
+          <div><dt>How much will it cost?</dt><dd>It depends on the scope, so I don't publish prices. After the free call you get a written scope and a fixed price, and nothing starts until you agree.</dd></div>
+          <div><dt>Can I see it before it goes live?</dt><dd>Yes. You get a preview link early in the build and give feedback as it takes shape.</dd></div>
+          <div><dt>Do you build in Arabic?</dt><dd>Yes. I build in Arabic and English, and we can talk in either. This site has an <a href="/ar/" lang="ar" hreflang="ar">Arabic version</a>.</dd></div>
+          <div><dt>Do I need my own domain or hosting?</dt><dd>No. I set up the domain, hosting and SSL for you, then deploy the site or app to it.</dd></div>
+          <div><dt>What happens after launch?</dt><dd>I can keep looking after it: uptime monitoring, backups, fixes and small changes.</dd></div>
+          <div><dt>Will it work with the tools we already use?</dt><dd>AI agents and automations connect to WhatsApp, Google Sheets, Calendar and the tools you already use. Tell me what you have on the call.</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -317,6 +375,8 @@
           </li>
         </ol>
 
+        <details class="more">
+        <summary>Tools, training and education</summary>
         <h3 class="subhead" id="stack-title">Tools, by where I've used them</h3>
         <div class="stack" aria-labelledby="stack-title">
           <div class="stack-col">
@@ -337,7 +397,7 @@
           <div><dt>Course</dt><dd>100xDevs web development and DevOps.</dd></div>
           <div><dt>Languages</dt><dd>Arabic, English, Hindi, Urdu.</dd></div>
         </dl>
-
+        </details>
         <div class="hire">
           <p><strong>Hiring?</strong> I'm also open to full-time DevOps, cloud support, automation or application support roles. I'm in Jeddah with a transferable iqama and open to relocating.</p>
           <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-line" target="_blank" rel="noopener">Open CV <span class="btn-meta">PDF</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></a>
@@ -368,17 +428,20 @@
             <label class="field"><span>Your name</span><input type="text" name="name" autocomplete="name" required /></label>
             <label class="field"><span>Your email</span><input type="email" name="email" autocomplete="email" required /></label>
           </div>
-          <label class="field"><span>What do you need?</span>
-            <select name="subject" required>
-              <option value="" disabled selected>Choose one</option>
-              <option>A business website</option>
-              <option>A custom web app or internal tool</option>
-              <option>An AI agent or automation</option>
-              <option>Hosting, deployment or support</option>
-              <option>A job opportunity</option>
-              <option>Something else</option>
-            </select>
-          </label>
+          <div class="form-row">
+            <label class="field"><span>What do you need?</span>
+              <select name="subject" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>A business website</option>
+                <option>A custom web app or internal tool</option>
+                <option>An AI agent or automation</option>
+                <option>Hosting, deployment or support</option>
+                <option>A job opportunity</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label class="field"><span>Phone or WhatsApp <span class="field-optional">(optional)</span></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" /></label>
+          </div>
           <label class="field"><span>Message</span><textarea name="message" rows="5" placeholder="What you need, any deadline, and a link to your current site if you have one." required></textarea></label>
           <button type="submit" class="btn btn-signal" id="submit-btn">Send message <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></button>
           <p class="form-status" id="form-status" aria-live="polite"></p>
@@ -394,7 +457,6 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

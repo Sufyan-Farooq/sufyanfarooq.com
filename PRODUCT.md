@@ -59,3 +59,15 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 - Use **naqlapp** as the displayed project name, as explicitly requested by the user. It includes the landing page and Truck Dispatcher TMS.
 
 - Do not showcase the email outreach automation tool on the public portfolio or CV. It is used to contact employers, and the user explicitly asked to remove it from public-facing projects. Preserve the mailer itself.
+
+## Changes 12 November 2026
+
+- An Arabic, right-to-left version lives at `/ar/` (`ar/index.html`). It shares `style.css` and `script.js` with the English page; `script.js` picks its wording from the page's `lang`. Any content change to `index.html` must be mirrored in `ar/index.html`. The stylesheet uses logical properties (inline-start/end) so both directions work.
+- WhatsApp is a primary contact path: a "WhatsApp me" button in the hero and a WhatsApp link in the mobile menu.
+- The share image is `assets/og.png`, exported at 1200x630 from `assets/og/og.html` with headless Chrome, the same way as the CV. The page head carries search markup (ProfessionalService) built only from facts already on the page.
+- "Common questions" sits at the end of the Process section and only restates confirmed facts. Still to be supplied by the user before they can be added: typical timelines, who owns the code and domain, payment terms, and what care costs after launch.
+- Tools, training and education are folded behind a "Tools, training and education" toggle in About so clients see the Digival log and recruiters can still open the detail.
+- On phones the status table is folded behind the one-line summary with a "Show each app" button.
+- Icons are drawn from a small set inside `script.js`; the page no longer loads the icon library from unpkg.
+- The contact form has an optional phone or WhatsApp field.
+- Not done, waiting on material from the user: client quotes or results for naqlapp and Omar Global, and a screen recording of a real Qaswa AI booking conversation.

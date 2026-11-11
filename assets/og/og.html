@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Share image source (export at 1200x630)</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #0e1b3f; color: #f2f2f2; font-family: Archivo, system-ui, sans-serif; display: grid; grid-template-columns: 1fr 330px; }
+  .copy { padding: 64px 40px 56px 72px; display: flex; flex-direction: column; justify-content: space-between; }
+  .who { font-family: 'Martian Mono', monospace; font-size: 20px; color: #c9cfdd; display: flex; align-items: center; gap: 14px; }
+  .lamp { width: 12px; height: 12px; border-radius: 50%; background: #6fe39a; box-shadow: 0 0 0 5px rgba(111, 227, 154, 0.18); }
+  h1 { font-size: 78px; line-height: 0.98; font-weight: 760; font-stretch: 110%; letter-spacing: -0.025em; }
+  .sub { font-size: 27px; line-height: 1.35; color: #c9cfdd; max-width: 700px; }
+  .url { font-family: 'Martian Mono', monospace; font-size: 20px; color: #9aa4bf; }
+  .face { background: #efefef; border-left: 1px solid #3b4a79; }
+  .face img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <p class="who"><span class="lamp"></span>Sufyan Farooq · Jeddah, Saudi Arabia</p>
+    <h1>Websites, apps and AI automation that stay online.</h1>
+    <div>
+      <p class="sub">Built in Arabic and English, then hosted and looked after.</p>
+      <p class="url" style="margin-top:18px">sufyanfarooq.com</p>
+    </div>
+  </div>
+  <div class="face"><img src="../profile.webp" alt="" /></div>
+</body>
+</html>
