@@ -149,7 +149,9 @@ const INCIDENT_LIMIT = 20;
 const saved = loadStats().monitor || {};
 const monitor = {
   since: saved.since || new Date().toISOString(),
-  incidents: Array.isArray(saved.incidents) ? saved.incidents : [],
+  // Drop incidents for services no longer monitored; they could never close.
+  incidents: (Array.isArray(saved.incidents) ? saved.incidents : [])
+    .filter((i) => SERVICES.some((s) => s.id === i.service)),
 };
 const serviceState = new Map(SERVICES.map((s) => {
   const prev = (saved.services || {})[s.id] || {};
