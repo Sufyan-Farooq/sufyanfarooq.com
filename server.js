@@ -134,7 +134,6 @@ app.get('/api/stats', (req, res) => {
 const SERVICES = [
   { id: 'riyasat', name: 'Riyasat', url: 'https://riyasat.sufyanfarooq.com/' },
   { id: 'naqlapp', name: 'naqlapp', url: 'https://naqlapp.com/' },
-  { id: 'naql-tms', name: 'Truck Dispatcher', url: 'https://app.naqlapp.com/' },
   { id: 'mawarith', name: 'Mawarith', url: 'https://mawarith.sufyanfarooq.com/' },
   { id: 'turnup', name: 'TurnUp', url: 'https://turnup.sufyanfarooq.com/' },
   { id: 'omar', name: 'Omar Global', url: 'https://omergloballlc.com/' },
