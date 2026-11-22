@@ -57,20 +57,33 @@
     }
   }
   </script>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="assets/logo-128.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/logo-128.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <script>
+    // Hide the first frame until the motion layer is ready; never longer than 4 s.
+    (function () {
+      var root = document.documentElement;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      root.classList.add('motion-pending');
+      setTimeout(function () { root.classList.remove('motion-pending'); }, 4000);
+    })();
+  </script>
 </head>
 <body>
+  <div class="loader" aria-hidden="true">
+    <p class="loader-name">Sufyan Farooq</p>
+    <p class="loader-meta data"><span class="loader-text">Checking 7 apps</span><span class="loader-count">000</span></p>
+  </div>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="topbar" id="navbar">
     <nav class="topbar-inner" aria-label="Primary navigation">
       <a href="#top" class="wordmark" aria-label="Sufyan Farooq, back to top">
-        <img class="wordmark-face" src="assets/profile.webp" alt="" width="680" height="1022" />
+        <img class="wordmark-face" src="/assets/profile.webp" alt="" width="680" height="1022" />
         <span class="wordmark-text"><span class="wordmark-name">Sufyan Farooq</span><span class="wordmark-role">Jeddah, Saudi Arabia</span></span>
       </a>
       <div class="topbar-links" id="nav-links">
@@ -102,19 +115,28 @@
 
   <main id="main-content">
     <section class="hero" id="top">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1 class="hero-title">Websites, apps and AI automation that stay online.</h1>
-          <p class="hero-lead">I build them in Arabic and English for businesses, then host them and look after them. My day job is keeping a university platform working for 2,000+ people, so I build for the long run. The board <span class="only-wide">beside this</span><span class="only-narrow">below</span> checks apps I built right now.</p>
-          <a class="hero-proof" id="hero-proof" href="#status-board" hidden><span class="lamp" aria-hidden="true"></span><span id="hero-proof-text"></span></a>
-          <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>Taking on new projects. You get a fixed quote after a free call.</p>
-          <div class="hero-actions">
+      <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-kicker"><span>Sufyan Farooq</span><span>Jeddah, Saudi Arabia</span></p>
+        <h1 class="hero-title">Websites, apps and AI automation that stay online.</h1>
+        <div class="hero-foot">
+          <p class="hero-lead">I build them in Arabic and English for businesses, then host them and look after them. My day job is keeping a university platform working for 2,000+ people, so I build for the long run. The board below checks apps I built right now.</p>
+          <div class="hero-side">
+            <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>Taking on new projects. You get a fixed quote after a free call.</p>
+            <a class="hero-proof" id="hero-proof" href="#status-board" hidden><span class="lamp" aria-hidden="true"></span><span id="hero-proof-text"></span></a>
+            <div class="hero-actions">
             <a href="#contact" class="btn btn-signal">Start a project <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
             <a href="https://wa.me/966544882306?text=Hi%20Sufyan%2C%20I%27d%20like%20to%20talk%20about%20a%20project." class="btn btn-line" target="_blank" rel="noopener"><i data-lucide="message-circle" class="icon-sm" aria-hidden="true"></i> WhatsApp me</a>
             <a href="#work" class="btn btn-line">See my work <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
           </div>
+          </div>
         </div>
+      </div>
+      <a class="scroll-cue" href="#live" tabindex="-1" aria-hidden="true"><span>Scroll</span></a>
+    </section>
 
+    <section class="live" id="live">
+      <div class="wrap">
         <aside class="board" id="status-board" aria-labelledby="board-title">
           <div class="board-head">
             <h2 class="board-title" id="board-title">Apps I built, checked live</h2>
@@ -212,7 +234,7 @@
         <div class="projects">
           <article class="project project--feature" id="qaswa">
             <a class="project-shot" href="https://qaswaai.com/en/" target="_blank" rel="noopener" aria-label="Visit Qaswa AI">
-              <img src="assets/plates/qaswa-screen.jpg" alt="Qaswa AI landing page showing a WhatsApp conversation with a clinic and the Qaswa Desk booking calendar" width="1440" height="960" loading="lazy" />
+              <img src="/assets/plates/qaswa-screen.jpg" alt="Qaswa AI landing page showing a WhatsApp conversation with a clinic and the Qaswa Desk booking calendar" width="1440" height="960" loading="lazy" />
             </a>
             <div class="project-body">
               <div class="project-top"><h3 class="project-name">Qaswa AI <span lang="ar" dir="rtl">قصواء</span></h3><span class="chip" data-status-for="qaswa">checking</span></div>
@@ -225,7 +247,7 @@
 
           <article class="project">
             <a class="project-shot" href="https://naqlapp.com/" target="_blank" rel="noopener" aria-label="Visit naqlapp">
-              <img src="assets/naqlapp-preview.jpg" alt="naqlapp logistics website showing transport, warehousing and shipping services" width="1265" height="712" loading="lazy" />
+              <img src="/assets/naqlapp-preview.jpg" alt="naqlapp logistics website showing transport, warehousing and shipping services" width="1265" height="712" loading="lazy" />
             </a>
             <div class="project-body">
               <div class="project-top"><h3 class="project-name">naqlapp</h3><span class="chip" data-status-for="naqlapp">checking</span></div>
@@ -239,7 +261,7 @@
 
           <article class="project">
             <a class="project-shot" href="https://omergloballlc.com/" target="_blank" rel="noopener" aria-label="Visit Omar Global LLC">
-              <img src="assets/plates/omarglobal-screen.jpg" alt="Omar Global LLC website presenting manpower supply and contracting services" width="1440" height="960" loading="lazy" />
+              <img src="/assets/plates/omarglobal-screen.jpg" alt="Omar Global LLC website presenting manpower supply and contracting services" width="1440" height="960" loading="lazy" />
             </a>
             <div class="project-body">
               <div class="project-top"><h3 class="project-name">Omar Global LLC</h3><span class="chip" data-status-for="omar">checking</span></div>
@@ -251,7 +273,7 @@
 
           <article class="project">
             <a class="project-shot" href="https://riyasat.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open Riyasat">
-              <img src="assets/plates/riyasat-screen.png" alt="Riyasat sign-in screen" width="1440" height="960" loading="lazy" />
+              <img src="/assets/plates/riyasat-screen.png" alt="Riyasat sign-in screen" width="1440" height="960" loading="lazy" />
             </a>
             <div class="project-body">
               <div class="project-top"><h3 class="project-name">Riyasat</h3><span class="chip" data-status-for="riyasat">checking</span></div>
@@ -264,7 +286,7 @@
 
           <article class="project">
             <a class="project-shot" href="https://mawarith.sufyanfarooq.com/" target="_blank" rel="noopener" aria-label="Open Mawarith">
-              <img src="assets/plates/mawarith-screen.png" alt="Mawarith inheritance calculator with Arabic and English interface" width="1159" height="946" loading="lazy" />
+              <img src="/assets/plates/mawarith-screen.png" alt="Mawarith inheritance calculator with Arabic and English interface" width="1159" height="946" loading="lazy" />
             </a>
             <div class="project-body">
               <div class="project-top"><h3 class="project-name">Mawarith <span lang="ar" dir="rtl">مواريث</span></h3><span class="chip" data-status-for="mawarith">checking</span></div>
@@ -399,7 +421,7 @@
         </details>
         <div class="hire">
           <p><strong>Hiring?</strong> I'm also open to full-time DevOps, cloud support, automation or application support roles. I'm in Jeddah with a transferable iqama and open to relocating.</p>
-          <a href="assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-line" target="_blank" rel="noopener">Open CV <span class="btn-meta">PDF</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></a>
+          <a href="/assets/cv/Sufyan_Farooq_CV.pdf" class="btn btn-line" target="_blank" rel="noopener">Open CV <span class="btn-meta">PDF</span><i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -407,7 +429,7 @@
     <section class="section section--contact theme-studio" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-grid">
         <div class="contact-intro">
-          <img class="contact-portrait" src="assets/profile.webp" alt="Sufyan Farooq" width="680" height="1022" loading="lazy" />
+          <img class="contact-portrait" src="/assets/profile.webp" alt="Sufyan Farooq" width="680" height="1022" loading="lazy" />
           <div>
             <h2 class="section-title" id="contact-title">Tell me what you need.</h2>
             <p class="section-lead">Email or WhatsApp me, or use the form. I usually reply within a day, and the first call is free.</p>
@@ -417,7 +439,7 @@
               <li><a href="tel:+966544882306"><span class="channel-label">Phone</span><span class="channel-value">+966 54 488 2306</span></a></li>
               <li><a href="https://www.linkedin.com/in/sufyanmfarooq/" target="_blank" rel="noopener"><span class="channel-label">LinkedIn</span><span class="channel-value">in/sufyanmfarooq</span></a></li>
               <li><a href="https://github.com/Sufyan-Farooq" target="_blank" rel="noopener"><span class="channel-label">GitHub</span><span class="channel-value">Sufyan-Farooq</span></a></li>
-              <li><a href="assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener"><span class="channel-label">CV</span><span class="channel-value">Open PDF</span></a></li>
+              <li><a href="/assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener"><span class="channel-label">CV</span><span class="channel-value">Open PDF</span></a></li>
             </ul>
           </div>
         </div>
@@ -450,12 +472,13 @@
   </main>
 
   <footer class="footer">
+    <p class="footer-mark" aria-hidden="true">Sufyan Farooq</p>
     <div class="wrap footer-row">
       <p class="footer-name">Sufyan Mohammed Farooq</p>
-      <p>Built and self-hosted by me on Oracle Cloud · <a href="assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener">CV</a> · © 2026</p>
+      <p>Built and self-hosted by me on Oracle Cloud · <a href="/assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener">CV</a> · © 2026</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

@@ -127,7 +127,14 @@
     return service.ok ? `${service.code} OK` : T.codeError(service.code);
   }
 
+  // The 3D scene in the hero (src/scene.js) draws the same results.
+  function shareStatus(data) {
+    window.__statusData = data;
+    window.dispatchEvent(new CustomEvent('statusdata', { detail: data }));
+  }
+
   function markUnavailable(summary, foot) {
+    shareStatus(null);
     summary.innerHTML = `<span class="lamp lamp--idle" aria-hidden="true"></span>${T.unavailable}`;
     foot.textContent = T.unavailableFoot;
     document.querySelectorAll('#board-rows tr').forEach((row) => {
@@ -167,6 +174,7 @@
       return;
     }
 
+    shareStatus(data);
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     data.services.forEach((service, index) => {
       const apply = () => {
@@ -250,6 +258,8 @@
       toggle.setAttribute('aria-label', open ? T.closeMenu : T.openMenu);
       drawer.setAttribute('aria-hidden', String(!open));
       document.body.style.overflow = open ? 'hidden' : '';
+      const lenis = window.__lenis;
+      if (lenis) open ? lenis.stop() : lenis.start();
     };
 
     toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('open')));

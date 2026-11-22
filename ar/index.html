@@ -28,9 +28,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <script>
+    // Hide the first frame until the motion layer is ready; never longer than 4 s.
+    (function () {
+      var root = document.documentElement;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      root.classList.add('motion-pending');
+      setTimeout(function () { root.classList.remove('motion-pending'); }, 4000);
+    })();
+  </script>
 </head>
 <body>
+  <div class="loader" aria-hidden="true">
+    <p class="loader-name">سفيان فاروق</p>
+    <p class="loader-meta data"><span class="loader-text">جارٍ فحص 7 تطبيقات</span><span class="loader-count">000</span></p>
+  </div>
   <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
   <header class="topbar" id="navbar">
     <nav class="topbar-inner" aria-label="التنقل الرئيسي">
@@ -65,18 +78,28 @@
   </div>
   <main id="main-content">
     <section class="hero" id="top">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1 class="hero-title">مواقع وتطبيقات وأتمتة بالذكاء الاصطناعي لا تتوقف.</h1>
-          <p class="hero-lead">أبنيها للشركات بالعربية والإنجليزية، ثم أستضيفها وأتابعها. عملي اليومي هو إبقاء منصة جامعية تعمل لأكثر من 2,000 مستخدم، ولهذا أبني لتدوم. اللوحة <span class="only-wide">المجاورة</span><span class="only-narrow">في الأسفل</span> تفحص الآن تطبيقات بنيتها.</p>
-          <a class="hero-proof" id="hero-proof" href="#status-board" hidden><span class="lamp" aria-hidden="true"></span><span id="hero-proof-text"></span></a>
-          <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>أستقبل مشاريع جديدة. تحصل على سعر ثابت بعد مكالمة مجانية.</p>
-          <div class="hero-actions">
+      <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-kicker"><span>سفيان فاروق</span><span>جدة، المملكة العربية السعودية</span></p>
+        <h1 class="hero-title">مواقع وتطبيقات وأتمتة بالذكاء الاصطناعي لا تتوقف.</h1>
+        <div class="hero-foot">
+          <p class="hero-lead">أبنيها للشركات بالعربية والإنجليزية، ثم أستضيفها وأتابعها. عملي اليومي هو إبقاء منصة جامعية تعمل لأكثر من 2,000 مستخدم، ولهذا أبني لتدوم. اللوحة في الأسفل تفحص الآن تطبيقات بنيتها.</p>
+          <div class="hero-side">
+            <p class="hero-availability"><span class="lamp" aria-hidden="true"></span>أستقبل مشاريع جديدة. تحصل على سعر ثابت بعد مكالمة مجانية.</p>
+            <a class="hero-proof" id="hero-proof" href="#status-board" hidden><span class="lamp" aria-hidden="true"></span><span id="hero-proof-text"></span></a>
+            <div class="hero-actions">
             <a href="#contact" class="btn btn-signal">ابدأ مشروعك <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
             <a href="https://wa.me/966544882306?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B3%D9%81%D9%8A%D8%A7%D9%86%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9." class="btn btn-line" target="_blank" rel="noopener"><i data-lucide="message-circle" class="icon-sm" aria-hidden="true"></i> راسلني على واتساب</a>
             <a href="#work" class="btn btn-line">شاهد أعمالي <i data-lucide="arrow-down-right" class="icon-sm" aria-hidden="true"></i></a>
           </div>
+          </div>
         </div>
+      </div>
+      <a class="scroll-cue" href="#live" tabindex="-1" aria-hidden="true"><span>مرّر للأسفل</span></a>
+    </section>
+
+    <section class="live" id="live">
+      <div class="wrap">
         <aside class="board" id="status-board" aria-labelledby="board-title">
           <div class="board-head">
             <h2 class="board-title" id="board-title">تطبيقات بنيتها، تُفحص مباشرة</h2>
@@ -401,12 +424,13 @@
   </main>
 
   <footer class="footer">
+    <p class="footer-mark" aria-hidden="true">سفيان فاروق</p>
     <div class="wrap footer-row">
       <p class="footer-name">سفيان محمد فاروق</p>
       <p>بنيته وأستضيفه بنفسي على Oracle Cloud · <a href="/assets/cv/Sufyan_Farooq_CV.pdf" target="_blank" rel="noopener">السيرة الذاتية</a> · © 2026</p>
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

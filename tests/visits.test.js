@@ -9,7 +9,7 @@ const { once } = require('node:events');
 const vm = require('node:vm');
 
 test('visit counter shows unique visitors when the page includes it', async () => {
-  const source = fs.readFileSync(path.join(__dirname, '..', 'script.js'), 'utf8');
+  const source = fs.readFileSync(path.join(__dirname, '..', 'src', 'site.js'), 'utf8');
   const code = source.slice(source.indexOf('  async function recordVisit()'), source.indexOf('  // ---------- DOM Ready Bootstrapper'));
   for (const [totalUnique, expected] of [[2, '2 unique visitors'], [1, '1 unique visitor'], [0, '0 unique visitors'], [undefined, null]]) {
     const counter = { hidden: true, textContent: '' };

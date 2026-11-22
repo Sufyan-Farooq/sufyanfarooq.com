@@ -46,7 +46,7 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 
 - Superseded 2 November 2026: clients come first. Availability for employment (transferable iqama, Jeddah, open to relocating, target roles) now lives in the About section's "Hiring?" note, not the hero.
 - Previously: lead with Digival experience and the dashboard outcome, then feature Riyasat and business websites. Keep TurnUp in supporting personal project/deployment work and link its live application at https://turnup.sufyanfarooq.com/. The user confirmed it is live on 20 October 2026.
-- Offer the CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Since 30 October 2026 it is generated from `assets/cv/cv.html` (same navy and studio-grey look as the site) by printing that page to PDF with headless Chrome; edit the HTML, then re-export. Keep it consistent with the role-specific CVs in the jobs-mail workspace.
+- Offer the CV at `assets/cv/Sufyan_Farooq_CV.pdf` through the hero, navigation, contact section, footer, and quick actions. Since 30 October 2026 it is generated from `public/assets/cv/cv.html` (same navy and studio-grey look as the site) by printing that page to PDF with headless Chrome; edit the HTML, then re-export. Keep it consistent with the role-specific CVs in the jobs-mail workspace.
 - Education is BCA (Osmania University, graduated 2025), with MBA in progress in the final year. Digival start date: March 2023 (confirmed by the user 30 October 2026). Professional DevOps employment is not claimed.
 
 ## Confirmed project corrections 20 October 2026
@@ -62,12 +62,17 @@ Portfolio copy and existing project details are in `index.html`; identity assets
 
 ## Changes 12 November 2026
 
-- An Arabic, right-to-left version lives at `/ar/` (`ar/index.html`). It shares `style.css` and `script.js` with the English page; `script.js` picks its wording from the page's `lang`. Any content change to `index.html` must be mirrored in `ar/index.html`. The stylesheet uses logical properties (inline-start/end) so both directions work.
+- An Arabic, right-to-left version lives at `/ar/` (`ar/index.html`). It shares `src/style.css` and `src/site.js` with the English page; `src/site.js` picks its wording from the page's `lang`. Any content change to `index.html` must be mirrored in `ar/index.html`. The stylesheet uses logical properties (inline-start/end) so both directions work.
 - WhatsApp is a primary contact path: a "WhatsApp me" button in the hero and a WhatsApp link in the mobile menu.
-- The share image is `assets/og.png`, exported at 1200x630 from `assets/og/og.html` with headless Chrome, the same way as the CV. The page head carries search markup (ProfessionalService) built only from facts already on the page.
+- The share image is `public/assets/og.png`, exported at 1200x630 from `public/assets/og/og.html` with headless Chrome, the same way as the CV. The page head carries search markup (ProfessionalService) built only from facts already on the page.
 - "Common questions" sits at the end of the Process section and only restates confirmed facts. Still to be supplied by the user before they can be added: typical timelines, who owns the code and domain, payment terms, and what care costs after launch.
 - Tools, training and education are folded behind a "Tools, training and education" toggle in About so clients see the Digival log and recruiters can still open the detail.
 - On phones the status table is folded behind the one-line summary with a "Show each app" button.
 - Icons are drawn from a small set inside `script.js`; the page no longer loads the icon library from unpkg.
 - The contact form has an optional phone or WhatsApp field.
 - Not done, waiting on material from the user: client quotes or results for naqlapp and Omar Global, and a screen recording of a real Qaswa AI booking conversation.
+
+## Changes 23 November 2026
+
+- Rebuilt on Vite with GSAP, Three.js and Lenis at the user's request ("go wild"); Remotion was dropped at the user's request. Pages stay plain HTML. `npm run dev` serves both pages with the Express API routes on port 3000; `npm run build` writes `dist/`, which is the only folder the production server serves. Static files (images, CV, share image) live in `public/`.
+- New layout: short loader on the first visit of a session, full-screen hero with a Three.js orbit of the monitored apps (node colours and response times come from `/api/status`), the live board as its own section, a scroll-driven marquee of the four services, stacked service cards, a sideways-scrolling work gallery on wide screens, a scroll-filled process line, counting results in the Digival log, and a full-width name in the footer. All copy and facts are unchanged.

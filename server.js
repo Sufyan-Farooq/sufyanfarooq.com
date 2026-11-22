@@ -13,7 +13,10 @@ const SALT = process.env.VISIT_SALT || 'change-me-please';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname));
+
+// The built site (npm run build) lives in dist/. Only that folder is public,
+// so server files and stats.json are never served.
+const SITE_DIR = path.join(__dirname, 'dist');
 
 // ---------- storage helpers ----------
 
@@ -345,14 +348,34 @@ app.get('/terminal.svg', async (req, res) => {
   res.send(svg);
 });
 
-app.listen(PORT, () => {
-  if (process.env.STATUS_CHECKS !== 'off') {
-    checkAll();
-    setInterval(checkAll, CHECK_INTERVAL_MS).unref();
-  }
-  console.log('==================================================');
-  console.log(`Sufyan's Portfolio Server is running!`);
-  console.log(`Local Address: http://localhost:${PORT}`);
-  console.log(`Stats File: ${STATS_FILE}`);
-  console.log('==================================================');
-});
+// Static pages go last so the API routes above always win.
+app.use(express.static(SITE_DIR, {
+  setHeaders(res, file) {
+    // Vite fingerprints bundled files, so they can be cached for a year.
+    if (file.includes(`${path.sep}static${path.sep}`)) res.set('Cache-Control', 'public, max-age=31536000, immutable');
+  },
+}));
+
+let checksStarted = false;
+function startChecks() {
+  if (checksStarted || process.env.STATUS_CHECKS === 'off') return;
+  checksStarted = true;
+  checkAll();
+  setInterval(checkAll, CHECK_INTERVAL_MS).unref();
+}
+
+// `node server.js` runs the site; vite.config.js imports the app so the
+// dev server answers the same /api routes.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    startChecks();
+    console.log('==================================================');
+    console.log(`Sufyan's Portfolio Server is running!`);
+    console.log(`Local Address: http://localhost:${PORT}`);
+    console.log(`Stats File: ${STATS_FILE}`);
+    if (!fs.existsSync(SITE_DIR)) console.log('No dist/ folder yet: run npm run build, or npm run dev while editing.');
+    console.log('==================================================');
+  });
+}
+
+module.exports = { app, startChecks };

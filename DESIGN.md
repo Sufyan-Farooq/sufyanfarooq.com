@@ -134,7 +134,14 @@ Content wraps at 1240px with a `clamp(16px, 4vw, 40px)` gutter. The hero and sec
 
 ## Motion
 
-One authored moment: status rows resolve one after another (140ms apart) as live results arrive. Everything else is short hover and focus transitions on the `cubic-bezier(0.16, 1, 0.3, 1)` ease-out. Reduced motion applies results instantly and turns off smooth scrolling.
+Since 23 November 2026 the site has an authored motion layer (`src/motion.js`, GSAP + Lenis) and a Three.js hero (`src/scene.js`), at the user's request to "go wild":
+
+- **Hero scene:** the server as a faceted core, each monitored app as a node on one of three tilted orbits. Nodes stay grey until checked, then a packet travels out and the node turns green or red with its response time on a label, 140ms apart like the board rows. Hovering a board row highlights its node. Pointer tilts the system; scrolling tilts it back and zooms out.
+- **Scroll:** Lenis smooth scrolling; word-mask reveals on headings; staggered fade-ups; services stack as sticky cards that recede; the work section pins and scrolls sideways on screens over 1080px; the process line fills with scroll; log numbers count up.
+- **Pointer:** a trailing ring cursor and magnetic buttons on fine pointers only.
+- **Reduced motion:** no Lenis, no loader, no reveals; the scene renders still with final colours. Without JavaScript every element is visible.
+
+The palette rule still holds: navy and studio grey from the portrait, green and red only for measured state.
 
 ## Components
 

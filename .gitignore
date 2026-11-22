@@ -9,8 +9,9 @@ data/
 .impeccable/build/
 .impeccable/mocks/
 .impeccable/review/
-# Original attachments are preserved locally; the site uses assets/plates copies.
-/assets/mawarith-screenshot.png
-/assets/turnup-screenshot.png
+# Original attachments are preserved locally; the site uses public/assets/plates copies.
+/public/assets/mawarith-screenshot.png
+/public/assets/turnup-screenshot.png
 *.exe
 .agent/**/bin/
+dist/
